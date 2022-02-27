@@ -1,0 +1,4 @@
+netty:
+  server:
+    work-thread: 4
+    port: 8888
