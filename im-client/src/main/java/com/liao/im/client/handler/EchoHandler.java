@@ -12,18 +12,16 @@ import lombok.extern.slf4j.Slf4j;
  */
 @ChannelHandler.Sharable
 @Slf4j
-public class EchoHandler extends SimpleChannelInboundHandler<ByteBuf> {
+public class EchoHandler extends SimpleChannelInboundHandler<Object> {
     public final static EchoHandler INSTANCE = new EchoHandler();
 
     private EchoHandler() {
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
-        final int count = msg.readableBytes();
-        final byte[] bs = new byte[count];
-        msg.readBytes(bs);
-        log.info("data {}", new String(bs));
+    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
+        log.info("收到的数据为{} 类型为{}", msg, msg.getClass());
     }
+
 
 }

@@ -1,11 +1,15 @@
 package com.liao.im.client.handler;
 
+import com.liao.im.common.config.IMConfig;
+import com.liao.im.common.utils.DataPackUtil;
+import com.liao.im.common.utils.ProtoDupleHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
+import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -33,7 +37,7 @@ public class NettyClient {
     NioEventLoopGroup g;
 
     public void run() {
-        log.info("配置信息 remoteHost:{} port:{} workerThreads:{}",remoteHost,port,workerThreads);
+        log.debug("配置信息 remoteHost:{} port:{} workerThreads:{}", remoteHost, port, workerThreads);
         try {
             connect();
         } catch (Exception e) {
@@ -43,7 +47,7 @@ public class NettyClient {
         }
     }
 
-    public void connect() throws InterruptedException {
+    public void connect() throws Exception {
         final Bootstrap b = new Bootstrap();
         g = new NioEventLoopGroup(workerThreads);
         b.group(g).channel(NioSocketChannel.class)
@@ -52,24 +56,28 @@ public class NettyClient {
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(EchoHandler.INSTANCE);
+                        final ChannelPipeline pipeline = ch.pipeline();
+                        pipeline.addLast(new ProtoDupleHandler());
+                        pipeline.addLast(EchoHandler.INSTANCE);
+
                     }
                 });
         final ChannelFuture future = b.connect();
         future.addListener(listener -> {
-            log.info(listener.isSuccess() ? "连接成功" : "连接失败");
+            log.debug(listener.isSuccess() ? "连接成功" : "连接失败");
         });
         String msg;
         var channel = future.channel();
         final Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             msg = scanner.next();
-            if (msg.equals("qq")) break;
-            log.info("msg={}",msg);
-            final ByteBuf buf = channel.alloc().buffer().writeBytes(msg.getBytes(StandardCharsets.UTF_8));
-            channel.writeAndFlush(buf).addListener(listener -> {
+            if (msg.equals("qq")) {
+                throw new Exception("close");
+            }
+            log.debug("msg={}", msg);
+            channel.writeAndFlush(msg).addListener(listener -> {
                 final String s = listener.isSuccess() ? "发送成功" : "发送失败";
-                log.info(s);
+                log.debug(s);
             });
         }
         future.channel().closeFuture().sync();

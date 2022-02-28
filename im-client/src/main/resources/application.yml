@@ -3,3 +3,6 @@ netty:
     remote-host: 127.0.0.1
     port: 8888
     worker-threads: 4
+logging:
+  level:
+    com.liao.im: debug

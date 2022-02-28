@@ -23,7 +23,7 @@ public class NettyServer {
 
     public void run() {
         final ServerBootstrap b = new ServerBootstrap();
-        log.info("work  thread :{} netty port: {}", workThread, port);
+        log.debug("work  thread :{} netty port: {}", workThread, port);
         final NioEventLoopGroup boosGroup = new NioEventLoopGroup(1);
         setWorkerThread();
         final NioEventLoopGroup workGroup = new NioEventLoopGroup(workThread);
@@ -32,7 +32,7 @@ public class NettyServer {
                     .childHandler(new IMHandler())
                     .channel(NioServerSocketChannel.class)
                     .bind(port);
-            log.info("netty 初始化成功");
+            log.debug("netty 初始化成功");
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -43,7 +43,7 @@ message LoginRequest {
 message LoginResponse {
   bool result = 1; // 登录结果
   uint32 code = 2; // 状态码
-  string info = 3; // 状态信息
+  string debug = 3; // 状态信息
   uint32 expose = 4; // 信息提示
 }
 
@@ -65,7 +65,7 @@ message MessageRequest {
 message MessageResponse {
   bool result = 1; // 发送结果
   uint32 code = 2; // 状态码
-  string info = 3; // 信息
+  string debug = 3; // 信息
   uint32 expose = 4; // 错误描述
   bool last_block = 5;
   fixed32 block_index = 6;

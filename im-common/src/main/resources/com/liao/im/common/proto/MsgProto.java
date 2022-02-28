@@ -170,7 +170,7 @@ public final class MsgProto {
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
-        throw new IllegalArgumentException(
+        throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
@@ -181,7 +181,7 @@ public final class MsgProto {
      * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
-    @Deprecated
+    @java.lang.Deprecated
     public static HeadType valueOf(int value) {
       return forNumber(value);
     }
@@ -220,7 +220,7 @@ public final class MsgProto {
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       if (this == UNRECOGNIZED) {
-        throw new IllegalStateException(
+        throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
@@ -231,7 +231,7 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return MsgProto.getDescriptor().getEnumTypes().get(0);
+      return com.liao.im.common.proto.MsgProto.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final HeadType[] VALUES = values();
@@ -239,7 +239,7 @@ public final class MsgProto {
     public static HeadType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new IllegalArgumentException(
+        throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
@@ -349,7 +349,7 @@ public final class MsgProto {
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
-        throw new IllegalArgumentException(
+        throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
@@ -360,7 +360,7 @@ public final class MsgProto {
      * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
-    @Deprecated
+    @java.lang.Deprecated
     public static MessageType valueOf(int value) {
       return forNumber(value);
     }
@@ -395,7 +395,7 @@ public final class MsgProto {
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       if (this == UNRECOGNIZED) {
-        throw new IllegalStateException(
+        throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
@@ -406,7 +406,7 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return MsgProto.getDescriptor().getEnumTypes().get(1);
+      return com.liao.im.common.proto.MsgProto.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final MessageType[] VALUES = values();
@@ -414,7 +414,7 @@ public final class MsgProto {
     public static MessageType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new IllegalArgumentException(
+        throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
@@ -444,7 +444,7 @@ public final class MsgProto {
      * <code>string uid = 1;</code>
      * @return The uid.
      */
-    String getUid();
+    java.lang.String getUid();
     /**
      * <pre>
      * 用户id
@@ -464,7 +464,7 @@ public final class MsgProto {
      * <code>string deviceId = 2;</code>
      * @return The deviceId.
      */
-    String getDeviceId();
+    java.lang.String getDeviceId();
     /**
      * <pre>
      * 设备id
@@ -484,7 +484,7 @@ public final class MsgProto {
      * <code>string token = 3;</code>
      * @return The token.
      */
-    String getToken();
+    java.lang.String getToken();
     /**
      * <pre>
      * 用户token
@@ -514,7 +514,7 @@ public final class MsgProto {
      * <code>string app_version = 5;</code>
      * @return The appVersion.
      */
-    String getAppVersion();
+    java.lang.String getAppVersion();
     /**
      * <pre>
      * app 版本
@@ -545,14 +545,14 @@ public final class MsgProto {
       appVersion_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new LoginRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -563,7 +563,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -576,19 +576,19 @@ public final class MsgProto {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               uid_ = s;
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               deviceId_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               token_ = s;
               break;
@@ -599,7 +599,7 @@ public final class MsgProto {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               appVersion_ = s;
               break;
@@ -625,19 +625,19 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              LoginRequest.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.LoginRequest.class, com.liao.im.common.proto.MsgProto.LoginRequest.Builder.class);
     }
 
     public static final int UID_FIELD_NUMBER = 1;
-    private volatile Object uid_;
+    private volatile java.lang.Object uid_;
     /**
      * <pre>
      * 用户id
@@ -646,15 +646,15 @@ public final class MsgProto {
      * <code>string uid = 1;</code>
      * @return The uid.
      */
-    @Override
-    public String getUid() {
-      Object ref = uid_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         uid_ = s;
         return s;
       }
@@ -667,14 +667,14 @@ public final class MsgProto {
      * <code>string uid = 1;</code>
      * @return The bytes for uid.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUidBytes() {
-      Object ref = uid_;
-      if (ref instanceof String) {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         uid_ = b;
         return b;
       } else {
@@ -683,7 +683,7 @@ public final class MsgProto {
     }
 
     public static final int DEVICEID_FIELD_NUMBER = 2;
-    private volatile Object deviceId_;
+    private volatile java.lang.Object deviceId_;
     /**
      * <pre>
      * 设备id
@@ -692,15 +692,15 @@ public final class MsgProto {
      * <code>string deviceId = 2;</code>
      * @return The deviceId.
      */
-    @Override
-    public String getDeviceId() {
-      Object ref = deviceId_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getDeviceId() {
+      java.lang.Object ref = deviceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         deviceId_ = s;
         return s;
       }
@@ -713,14 +713,14 @@ public final class MsgProto {
      * <code>string deviceId = 2;</code>
      * @return The bytes for deviceId.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
-      Object ref = deviceId_;
-      if (ref instanceof String) {
+      java.lang.Object ref = deviceId_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         deviceId_ = b;
         return b;
       } else {
@@ -729,7 +729,7 @@ public final class MsgProto {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 3;
-    private volatile Object token_;
+    private volatile java.lang.Object token_;
     /**
      * <pre>
      * 用户token
@@ -738,15 +738,15 @@ public final class MsgProto {
      * <code>string token = 3;</code>
      * @return The token.
      */
-    @Override
-    public String getToken() {
-      Object ref = token_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         token_ = s;
         return s;
       }
@@ -759,14 +759,14 @@ public final class MsgProto {
      * <code>string token = 3;</code>
      * @return The bytes for token.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      Object ref = token_;
-      if (ref instanceof String) {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         token_ = b;
         return b;
       } else {
@@ -784,13 +784,13 @@ public final class MsgProto {
      * <code>uint32 platform = 4;</code>
      * @return The platform.
      */
-    @Override
+    @java.lang.Override
     public int getPlatform() {
       return platform_;
     }
 
     public static final int APP_VERSION_FIELD_NUMBER = 5;
-    private volatile Object appVersion_;
+    private volatile java.lang.Object appVersion_;
     /**
      * <pre>
      * app 版本
@@ -799,15 +799,15 @@ public final class MsgProto {
      * <code>string app_version = 5;</code>
      * @return The appVersion.
      */
-    @Override
-    public String getAppVersion() {
-      Object ref = appVersion_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getAppVersion() {
+      java.lang.Object ref = appVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         appVersion_ = s;
         return s;
       }
@@ -820,14 +820,14 @@ public final class MsgProto {
      * <code>string app_version = 5;</code>
      * @return The bytes for appVersion.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppVersionBytes() {
-      Object ref = appVersion_;
-      if (ref instanceof String) {
+      java.lang.Object ref = appVersion_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         appVersion_ = b;
         return b;
       } else {
@@ -836,7 +836,7 @@ public final class MsgProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -846,7 +846,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
@@ -867,7 +867,7 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -894,15 +894,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof LoginRequest)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.LoginRequest)) {
         return super.equals(obj);
       }
-      LoginRequest other = (LoginRequest) obj;
+      com.liao.im.common.proto.MsgProto.LoginRequest other = (com.liao.im.common.proto.MsgProto.LoginRequest) obj;
 
       if (!getUid()
           .equals(other.getUid())) return false;
@@ -918,7 +918,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -940,69 +940,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginRequest parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginRequest parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static LoginRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static LoginRequest parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static LoginRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1010,23 +1010,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(LoginRequest prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.LoginRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1036,18 +1036,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.LoginRequest)
-        LoginRequestOrBuilder {
+        com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                LoginRequest.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.LoginRequest.class, com.liao.im.common.proto.MsgProto.LoginRequest.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.LoginRequest.newBuilder()
@@ -1056,7 +1056,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1065,7 +1065,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -1081,29 +1081,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginRequest_descriptor;
       }
 
-      @Override
-      public LoginRequest getDefaultInstanceForType() {
-        return LoginRequest.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginRequest getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.LoginRequest.getDefaultInstance();
       }
 
-      @Override
-      public LoginRequest build() {
-        LoginRequest result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginRequest build() {
+        com.liao.im.common.proto.MsgProto.LoginRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public LoginRequest buildPartial() {
-        LoginRequest result = new LoginRequest(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginRequest buildPartial() {
+        com.liao.im.common.proto.MsgProto.LoginRequest result = new com.liao.im.common.proto.MsgProto.LoginRequest(this);
         result.uid_ = uid_;
         result.deviceId_ = deviceId_;
         result.token_ = token_;
@@ -1113,50 +1113,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof LoginRequest) {
-          return mergeFrom((LoginRequest)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.LoginRequest) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.LoginRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(LoginRequest other) {
-        if (other == LoginRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.LoginRequest other) {
+        if (other == com.liao.im.common.proto.MsgProto.LoginRequest.getDefaultInstance()) return this;
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
           onChanged();
@@ -1181,21 +1181,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        LoginRequest parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.LoginRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (LoginRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.LoginRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1205,7 +1205,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object uid_ = "";
+      private java.lang.Object uid_ = "";
       /**
        * <pre>
        * 用户id
@@ -1214,16 +1214,16 @@ public final class MsgProto {
        * <code>string uid = 1;</code>
        * @return The uid.
        */
-      public String getUid() {
-        Object ref = uid_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           uid_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1236,11 +1236,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
-        Object ref = uid_;
+        java.lang.Object ref = uid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           uid_ = b;
           return b;
         } else {
@@ -1257,7 +1257,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setUid(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1301,7 +1301,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object deviceId_ = "";
+      private java.lang.Object deviceId_ = "";
       /**
        * <pre>
        * 设备id
@@ -1310,16 +1310,16 @@ public final class MsgProto {
        * <code>string deviceId = 2;</code>
        * @return The deviceId.
        */
-      public String getDeviceId() {
-        Object ref = deviceId_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getDeviceId() {
+        java.lang.Object ref = deviceId_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           deviceId_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1332,11 +1332,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
-        Object ref = deviceId_;
+        java.lang.Object ref = deviceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           deviceId_ = b;
           return b;
         } else {
@@ -1353,7 +1353,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setDeviceId(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1397,7 +1397,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object token_ = "";
+      private java.lang.Object token_ = "";
       /**
        * <pre>
        * 用户token
@@ -1406,16 +1406,16 @@ public final class MsgProto {
        * <code>string token = 3;</code>
        * @return The token.
        */
-      public String getToken() {
-        Object ref = token_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           token_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1428,11 +1428,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
-        Object ref = token_;
+        java.lang.Object ref = token_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           token_ = b;
           return b;
         } else {
@@ -1449,7 +1449,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setToken(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1502,7 +1502,7 @@ public final class MsgProto {
        * <code>uint32 platform = 4;</code>
        * @return The platform.
        */
-      @Override
+      @java.lang.Override
       public int getPlatform() {
         return platform_;
       }
@@ -1536,7 +1536,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object appVersion_ = "";
+      private java.lang.Object appVersion_ = "";
       /**
        * <pre>
        * app 版本
@@ -1545,16 +1545,16 @@ public final class MsgProto {
        * <code>string app_version = 5;</code>
        * @return The appVersion.
        */
-      public String getAppVersion() {
-        Object ref = appVersion_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getAppVersion() {
+        java.lang.Object ref = appVersion_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           appVersion_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1567,11 +1567,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getAppVersionBytes() {
-        Object ref = appVersion_;
+        java.lang.Object ref = appVersion_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           appVersion_ = b;
           return b;
         } else {
@@ -1588,7 +1588,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setAppVersion(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1631,13 +1631,13 @@ public final class MsgProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1648,18 +1648,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.LoginRequest)
-    private static final LoginRequest DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.LoginRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new LoginRequest();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.LoginRequest();
     }
 
-    public static LoginRequest getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.LoginRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<LoginRequest>
         PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
-      @Override
+      @java.lang.Override
       public LoginRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1672,13 +1672,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<LoginRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public LoginRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1716,7 +1716,7 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The debug.
      */
-    String getdebug();
+    java.lang.String getdebug();
     /**
      * <pre>
      * 状态信息
@@ -1754,14 +1754,14 @@ public final class MsgProto {
       debug_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new LoginResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1772,7 +1772,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1795,7 +1795,7 @@ public final class MsgProto {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               debug_ = s;
               break;
@@ -1826,15 +1826,15 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              LoginResponse.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.LoginResponse.class, com.liao.im.common.proto.MsgProto.LoginResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -1847,7 +1847,7 @@ public final class MsgProto {
      * <code>bool result = 1;</code>
      * @return The result.
      */
-    @Override
+    @java.lang.Override
     public boolean getResult() {
       return result_;
     }
@@ -1862,13 +1862,13 @@ public final class MsgProto {
      * <code>uint32 code = 2;</code>
      * @return The code.
      */
-    @Override
+    @java.lang.Override
     public int getCode() {
       return code_;
     }
 
     public static final int debug_FIELD_NUMBER = 3;
-    private volatile Object debug_;
+    private volatile java.lang.Object debug_;
     /**
      * <pre>
      * 状态信息
@@ -1877,15 +1877,15 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The debug.
      */
-    @Override
-    public String getdebug() {
-      Object ref = debug_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getdebug() {
+      java.lang.Object ref = debug_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         debug_ = s;
         return s;
       }
@@ -1898,14 +1898,14 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The bytes for debug.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getdebugBytes() {
-      Object ref = debug_;
-      if (ref instanceof String) {
+      java.lang.Object ref = debug_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         debug_ = b;
         return b;
       } else {
@@ -1923,13 +1923,13 @@ public final class MsgProto {
      * <code>uint32 expose = 4;</code>
      * @return The expose.
      */
-    @Override
+    @java.lang.Override
     public int getExpose() {
       return expose_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1939,7 +1939,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (result_ != false) {
@@ -1957,7 +1957,7 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1983,15 +1983,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof LoginResponse)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.LoginResponse)) {
         return super.equals(obj);
       }
-      LoginResponse other = (LoginResponse) obj;
+      com.liao.im.common.proto.MsgProto.LoginResponse other = (com.liao.im.common.proto.MsgProto.LoginResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -2005,7 +2005,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2026,69 +2026,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginResponse parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static LoginResponse parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static LoginResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static LoginResponse parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static LoginResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.LoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2096,23 +2096,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(LoginResponse prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.LoginResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2122,18 +2122,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.LoginResponse)
-        LoginResponseOrBuilder {
+        com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                LoginResponse.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.LoginResponse.class, com.liao.im.common.proto.MsgProto.LoginResponse.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.LoginResponse.newBuilder()
@@ -2142,7 +2142,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2151,7 +2151,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         result_ = false;
@@ -2165,29 +2165,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_LoginResponse_descriptor;
       }
 
-      @Override
-      public LoginResponse getDefaultInstanceForType() {
-        return LoginResponse.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginResponse getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.LoginResponse.getDefaultInstance();
       }
 
-      @Override
-      public LoginResponse build() {
-        LoginResponse result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginResponse build() {
+        com.liao.im.common.proto.MsgProto.LoginResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public LoginResponse buildPartial() {
-        LoginResponse result = new LoginResponse(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.LoginResponse buildPartial() {
+        com.liao.im.common.proto.MsgProto.LoginResponse result = new com.liao.im.common.proto.MsgProto.LoginResponse(this);
         result.result_ = result_;
         result.code_ = code_;
         result.debug_ = debug_;
@@ -2196,50 +2196,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof LoginResponse) {
-          return mergeFrom((LoginResponse)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.LoginResponse) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.LoginResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(LoginResponse other) {
-        if (other == LoginResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.LoginResponse other) {
+        if (other == com.liao.im.common.proto.MsgProto.LoginResponse.getDefaultInstance()) return this;
         if (other.getResult() != false) {
           setResult(other.getResult());
         }
@@ -2258,21 +2258,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        LoginResponse parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.LoginResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (LoginResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.LoginResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2291,7 +2291,7 @@ public final class MsgProto {
        * <code>bool result = 1;</code>
        * @return The result.
        */
-      @Override
+      @java.lang.Override
       public boolean getResult() {
         return result_;
       }
@@ -2334,7 +2334,7 @@ public final class MsgProto {
        * <code>uint32 code = 2;</code>
        * @return The code.
        */
-      @Override
+      @java.lang.Override
       public int getCode() {
         return code_;
       }
@@ -2368,7 +2368,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object debug_ = "";
+      private java.lang.Object debug_ = "";
       /**
        * <pre>
        * 状态信息
@@ -2377,16 +2377,16 @@ public final class MsgProto {
        * <code>string debug = 3;</code>
        * @return The debug.
        */
-      public String getdebug() {
-        Object ref = debug_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getdebug() {
+        java.lang.Object ref = debug_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           debug_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2399,11 +2399,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getdebugBytes() {
-        Object ref = debug_;
+        java.lang.Object ref = debug_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           debug_ = b;
           return b;
         } else {
@@ -2420,7 +2420,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setdebug(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2473,7 +2473,7 @@ public final class MsgProto {
        * <code>uint32 expose = 4;</code>
        * @return The expose.
        */
-      @Override
+      @java.lang.Override
       public int getExpose() {
         return expose_;
       }
@@ -2506,13 +2506,13 @@ public final class MsgProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2523,18 +2523,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.LoginResponse)
-    private static final LoginResponse DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.LoginResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new LoginResponse();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.LoginResponse();
     }
 
-    public static LoginResponse getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.LoginResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<LoginResponse>
         PARSER = new com.google.protobuf.AbstractParser<LoginResponse>() {
-      @Override
+      @java.lang.Override
       public LoginResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2547,13 +2547,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<LoginResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public LoginResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2581,7 +2581,7 @@ public final class MsgProto {
      * <code>string from = 2;</code>
      * @return The from.
      */
-    String getFrom();
+    java.lang.String getFrom();
     /**
      * <pre>
      * 发送方的sessionId
@@ -2601,7 +2601,7 @@ public final class MsgProto {
      * <code>string to = 3;</code>
      * @return The to.
      */
-    String getTo();
+    java.lang.String getTo();
     /**
      * <pre>
      * 接收方的sessionId
@@ -2640,7 +2640,7 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageType msg_type = 5;</code>
      * @return The msgType.
      */
-    MessageType getMsgType();
+    com.liao.im.common.proto.MsgProto.MessageType getMsgType();
 
     /**
      * <pre>
@@ -2660,7 +2660,7 @@ public final class MsgProto {
      * <code>string url = 7;</code>
      * @return The url.
      */
-    String getUrl();
+    java.lang.String getUrl();
     /**
      * <pre>
      * 多媒体url
@@ -2680,7 +2680,7 @@ public final class MsgProto {
      * <code>string property = 8;</code>
      * @return The property.
      */
-    String getProperty();
+    java.lang.String getProperty();
     /**
      * <pre>
      * 附加属性
@@ -2700,7 +2700,7 @@ public final class MsgProto {
      * <code>string from_nick = 9;</code>
      * @return The fromNick.
      */
-    String getFromNick();
+    java.lang.String getFromNick();
     /**
      * <pre>
      * 发送者昵称
@@ -2720,7 +2720,7 @@ public final class MsgProto {
      * <code>string json = 10;</code>
      * @return The json.
      */
-    String getJson();
+    java.lang.String getJson();
     /**
      * <pre>
      * json
@@ -2755,14 +2755,14 @@ public final class MsgProto {
       json_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new MessageRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2773,7 +2773,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2791,13 +2791,13 @@ public final class MsgProto {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               from_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               to_ = s;
               break;
@@ -2819,25 +2819,25 @@ public final class MsgProto {
               break;
             }
             case 58: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
               break;
             }
             case 66: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               property_ = s;
               break;
             }
             case 74: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               fromNick_ = s;
               break;
             }
             case 82: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               json_ = s;
               break;
@@ -2863,15 +2863,15 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MessageRequest.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.MessageRequest.class, com.liao.im.common.proto.MsgProto.MessageRequest.Builder.class);
     }
 
     public static final int MSG_ID_FIELD_NUMBER = 1;
@@ -2884,13 +2884,13 @@ public final class MsgProto {
      * <code>uint64 msg_id = 1;</code>
      * @return The msgId.
      */
-    @Override
+    @java.lang.Override
     public long getMsgId() {
       return msgId_;
     }
 
     public static final int FROM_FIELD_NUMBER = 2;
-    private volatile Object from_;
+    private volatile java.lang.Object from_;
     /**
      * <pre>
      * 发送方的sessionId
@@ -2899,15 +2899,15 @@ public final class MsgProto {
      * <code>string from = 2;</code>
      * @return The from.
      */
-    @Override
-    public String getFrom() {
-      Object ref = from_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         from_ = s;
         return s;
       }
@@ -2920,14 +2920,14 @@ public final class MsgProto {
      * <code>string from = 2;</code>
      * @return The bytes for from.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFromBytes() {
-      Object ref = from_;
-      if (ref instanceof String) {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         from_ = b;
         return b;
       } else {
@@ -2936,7 +2936,7 @@ public final class MsgProto {
     }
 
     public static final int TO_FIELD_NUMBER = 3;
-    private volatile Object to_;
+    private volatile java.lang.Object to_;
     /**
      * <pre>
      * 接收方的sessionId
@@ -2945,15 +2945,15 @@ public final class MsgProto {
      * <code>string to = 3;</code>
      * @return The to.
      */
-    @Override
-    public String getTo() {
-      Object ref = to_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getTo() {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         to_ = s;
         return s;
       }
@@ -2966,14 +2966,14 @@ public final class MsgProto {
      * <code>string to = 3;</code>
      * @return The bytes for to.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
-      Object ref = to_;
-      if (ref instanceof String) {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         to_ = b;
         return b;
       } else {
@@ -2991,7 +2991,7 @@ public final class MsgProto {
      * <code>uint64 time = 4;</code>
      * @return The time.
      */
-    @Override
+    @java.lang.Override
     public long getTime() {
       return time_;
     }
@@ -3006,7 +3006,7 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageType msg_type = 5;</code>
      * @return The enum numeric value on the wire for msgType.
      */
-    @Override public int getMsgTypeValue() {
+    @java.lang.Override public int getMsgTypeValue() {
       return msgType_;
     }
     /**
@@ -3017,10 +3017,10 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageType msg_type = 5;</code>
      * @return The msgType.
      */
-    @Override public MessageType getMsgType() {
+    @java.lang.Override public com.liao.im.common.proto.MsgProto.MessageType getMsgType() {
       @SuppressWarnings("deprecation")
-      MessageType result = MessageType.valueOf(msgType_);
-      return result == null ? MessageType.UNRECOGNIZED : result;
+      com.liao.im.common.proto.MsgProto.MessageType result = com.liao.im.common.proto.MsgProto.MessageType.valueOf(msgType_);
+      return result == null ? com.liao.im.common.proto.MsgProto.MessageType.UNRECOGNIZED : result;
     }
 
     public static final int CONTENT_FIELD_NUMBER = 6;
@@ -3033,13 +3033,13 @@ public final class MsgProto {
      * <code>bytes content = 6;</code>
      * @return The content.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       return content_;
     }
 
     public static final int URL_FIELD_NUMBER = 7;
-    private volatile Object url_;
+    private volatile java.lang.Object url_;
     /**
      * <pre>
      * 多媒体url
@@ -3048,15 +3048,15 @@ public final class MsgProto {
      * <code>string url = 7;</code>
      * @return The url.
      */
-    @Override
-    public String getUrl() {
-      Object ref = url_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         url_ = s;
         return s;
       }
@@ -3069,14 +3069,14 @@ public final class MsgProto {
      * <code>string url = 7;</code>
      * @return The bytes for url.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
-      Object ref = url_;
-      if (ref instanceof String) {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         url_ = b;
         return b;
       } else {
@@ -3085,7 +3085,7 @@ public final class MsgProto {
     }
 
     public static final int PROPERTY_FIELD_NUMBER = 8;
-    private volatile Object property_;
+    private volatile java.lang.Object property_;
     /**
      * <pre>
      * 附加属性
@@ -3094,15 +3094,15 @@ public final class MsgProto {
      * <code>string property = 8;</code>
      * @return The property.
      */
-    @Override
-    public String getProperty() {
-      Object ref = property_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getProperty() {
+      java.lang.Object ref = property_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         property_ = s;
         return s;
       }
@@ -3115,14 +3115,14 @@ public final class MsgProto {
      * <code>string property = 8;</code>
      * @return The bytes for property.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPropertyBytes() {
-      Object ref = property_;
-      if (ref instanceof String) {
+      java.lang.Object ref = property_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         property_ = b;
         return b;
       } else {
@@ -3131,7 +3131,7 @@ public final class MsgProto {
     }
 
     public static final int FROM_NICK_FIELD_NUMBER = 9;
-    private volatile Object fromNick_;
+    private volatile java.lang.Object fromNick_;
     /**
      * <pre>
      * 发送者昵称
@@ -3140,15 +3140,15 @@ public final class MsgProto {
      * <code>string from_nick = 9;</code>
      * @return The fromNick.
      */
-    @Override
-    public String getFromNick() {
-      Object ref = fromNick_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getFromNick() {
+      java.lang.Object ref = fromNick_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         fromNick_ = s;
         return s;
       }
@@ -3161,14 +3161,14 @@ public final class MsgProto {
      * <code>string from_nick = 9;</code>
      * @return The bytes for fromNick.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFromNickBytes() {
-      Object ref = fromNick_;
-      if (ref instanceof String) {
+      java.lang.Object ref = fromNick_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         fromNick_ = b;
         return b;
       } else {
@@ -3177,7 +3177,7 @@ public final class MsgProto {
     }
 
     public static final int JSON_FIELD_NUMBER = 10;
-    private volatile Object json_;
+    private volatile java.lang.Object json_;
     /**
      * <pre>
      * json
@@ -3186,15 +3186,15 @@ public final class MsgProto {
      * <code>string json = 10;</code>
      * @return The json.
      */
-    @Override
-    public String getJson() {
-      Object ref = json_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getJson() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         json_ = s;
         return s;
       }
@@ -3207,14 +3207,14 @@ public final class MsgProto {
      * <code>string json = 10;</code>
      * @return The bytes for json.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJsonBytes() {
-      Object ref = json_;
-      if (ref instanceof String) {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         json_ = b;
         return b;
       } else {
@@ -3223,7 +3223,7 @@ public final class MsgProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3233,7 +3233,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (msgId_ != 0L) {
@@ -3248,7 +3248,7 @@ public final class MsgProto {
       if (time_ != 0L) {
         output.writeUInt64(4, time_);
       }
-      if (msgType_ != MessageType.TEXT.getNumber()) {
+      if (msgType_ != com.liao.im.common.proto.MsgProto.MessageType.TEXT.getNumber()) {
         output.writeEnum(5, msgType_);
       }
       if (!content_.isEmpty()) {
@@ -3269,7 +3269,7 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3289,7 +3289,7 @@ public final class MsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, time_);
       }
-      if (msgType_ != MessageType.TEXT.getNumber()) {
+      if (msgType_ != com.liao.im.common.proto.MsgProto.MessageType.TEXT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, msgType_);
       }
@@ -3314,15 +3314,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof MessageRequest)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.MessageRequest)) {
         return super.equals(obj);
       }
-      MessageRequest other = (MessageRequest) obj;
+      com.liao.im.common.proto.MsgProto.MessageRequest other = (com.liao.im.common.proto.MsgProto.MessageRequest) obj;
 
       if (getMsgId()
           != other.getMsgId()) return false;
@@ -3347,7 +3347,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3381,69 +3381,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageRequest parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageRequest parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static MessageRequest parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageRequest parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3451,23 +3451,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(MessageRequest prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.MessageRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3477,18 +3477,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.MessageRequest)
-        MessageRequestOrBuilder {
+        com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MessageRequest.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.MessageRequest.class, com.liao.im.common.proto.MsgProto.MessageRequest.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.MessageRequest.newBuilder()
@@ -3497,7 +3497,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3506,7 +3506,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         msgId_ = 0L;
@@ -3532,29 +3532,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageRequest_descriptor;
       }
 
-      @Override
-      public MessageRequest getDefaultInstanceForType() {
-        return MessageRequest.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageRequest getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.MessageRequest.getDefaultInstance();
       }
 
-      @Override
-      public MessageRequest build() {
-        MessageRequest result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageRequest build() {
+        com.liao.im.common.proto.MsgProto.MessageRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public MessageRequest buildPartial() {
-        MessageRequest result = new MessageRequest(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageRequest buildPartial() {
+        com.liao.im.common.proto.MsgProto.MessageRequest result = new com.liao.im.common.proto.MsgProto.MessageRequest(this);
         result.msgId_ = msgId_;
         result.from_ = from_;
         result.to_ = to_;
@@ -3569,50 +3569,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MessageRequest) {
-          return mergeFrom((MessageRequest)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.MessageRequest) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.MessageRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MessageRequest other) {
-        if (other == MessageRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.MessageRequest other) {
+        if (other == com.liao.im.common.proto.MsgProto.MessageRequest.getDefaultInstance()) return this;
         if (other.getMsgId() != 0L) {
           setMsgId(other.getMsgId());
         }
@@ -3654,21 +3654,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MessageRequest parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.MessageRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MessageRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.MessageRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3687,7 +3687,7 @@ public final class MsgProto {
        * <code>uint64 msg_id = 1;</code>
        * @return The msgId.
        */
-      @Override
+      @java.lang.Override
       public long getMsgId() {
         return msgId_;
       }
@@ -3721,7 +3721,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object from_ = "";
+      private java.lang.Object from_ = "";
       /**
        * <pre>
        * 发送方的sessionId
@@ -3730,16 +3730,16 @@ public final class MsgProto {
        * <code>string from = 2;</code>
        * @return The from.
        */
-      public String getFrom() {
-        Object ref = from_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           from_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3752,11 +3752,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getFromBytes() {
-        Object ref = from_;
+        java.lang.Object ref = from_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           from_ = b;
           return b;
         } else {
@@ -3773,7 +3773,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setFrom(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3817,7 +3817,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object to_ = "";
+      private java.lang.Object to_ = "";
       /**
        * <pre>
        * 接收方的sessionId
@@ -3826,16 +3826,16 @@ public final class MsgProto {
        * <code>string to = 3;</code>
        * @return The to.
        */
-      public String getTo() {
-        Object ref = to_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getTo() {
+        java.lang.Object ref = to_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           to_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3848,11 +3848,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getToBytes() {
-        Object ref = to_;
+        java.lang.Object ref = to_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           to_ = b;
           return b;
         } else {
@@ -3869,7 +3869,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setTo(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3922,7 +3922,7 @@ public final class MsgProto {
        * <code>uint64 time = 4;</code>
        * @return The time.
        */
-      @Override
+      @java.lang.Override
       public long getTime() {
         return time_;
       }
@@ -3965,7 +3965,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageType msg_type = 5;</code>
        * @return The enum numeric value on the wire for msgType.
        */
-      @Override public int getMsgTypeValue() {
+      @java.lang.Override public int getMsgTypeValue() {
         return msgType_;
       }
       /**
@@ -3991,11 +3991,11 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageType msg_type = 5;</code>
        * @return The msgType.
        */
-      @Override
-      public MessageType getMsgType() {
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageType getMsgType() {
         @SuppressWarnings("deprecation")
-        MessageType result = MessageType.valueOf(msgType_);
-        return result == null ? MessageType.UNRECOGNIZED : result;
+        com.liao.im.common.proto.MsgProto.MessageType result = com.liao.im.common.proto.MsgProto.MessageType.valueOf(msgType_);
+        return result == null ? com.liao.im.common.proto.MsgProto.MessageType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -4006,7 +4006,7 @@ public final class MsgProto {
        * @param value The msgType to set.
        * @return This builder for chaining.
        */
-      public Builder setMsgType(MessageType value) {
+      public Builder setMsgType(com.liao.im.common.proto.MsgProto.MessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4039,7 +4039,7 @@ public final class MsgProto {
        * <code>bytes content = 6;</code>
        * @return The content.
        */
-      @Override
+      @java.lang.Override
       public com.google.protobuf.ByteString getContent() {
         return content_;
       }
@@ -4076,7 +4076,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object url_ = "";
+      private java.lang.Object url_ = "";
       /**
        * <pre>
        * 多媒体url
@@ -4085,16 +4085,16 @@ public final class MsgProto {
        * <code>string url = 7;</code>
        * @return The url.
        */
-      public String getUrl() {
-        Object ref = url_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           url_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4107,11 +4107,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
-        Object ref = url_;
+        java.lang.Object ref = url_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           url_ = b;
           return b;
         } else {
@@ -4128,7 +4128,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setUrl(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4172,7 +4172,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object property_ = "";
+      private java.lang.Object property_ = "";
       /**
        * <pre>
        * 附加属性
@@ -4181,16 +4181,16 @@ public final class MsgProto {
        * <code>string property = 8;</code>
        * @return The property.
        */
-      public String getProperty() {
-        Object ref = property_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getProperty() {
+        java.lang.Object ref = property_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           property_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4203,11 +4203,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getPropertyBytes() {
-        Object ref = property_;
+        java.lang.Object ref = property_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           property_ = b;
           return b;
         } else {
@@ -4224,7 +4224,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setProperty(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4268,7 +4268,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object fromNick_ = "";
+      private java.lang.Object fromNick_ = "";
       /**
        * <pre>
        * 发送者昵称
@@ -4277,16 +4277,16 @@ public final class MsgProto {
        * <code>string from_nick = 9;</code>
        * @return The fromNick.
        */
-      public String getFromNick() {
-        Object ref = fromNick_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getFromNick() {
+        java.lang.Object ref = fromNick_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           fromNick_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4299,11 +4299,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getFromNickBytes() {
-        Object ref = fromNick_;
+        java.lang.Object ref = fromNick_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           fromNick_ = b;
           return b;
         } else {
@@ -4320,7 +4320,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setFromNick(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4364,7 +4364,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object json_ = "";
+      private java.lang.Object json_ = "";
       /**
        * <pre>
        * json
@@ -4373,16 +4373,16 @@ public final class MsgProto {
        * <code>string json = 10;</code>
        * @return The json.
        */
-      public String getJson() {
-        Object ref = json_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getJson() {
+        java.lang.Object ref = json_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           json_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4395,11 +4395,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getJsonBytes() {
-        Object ref = json_;
+        java.lang.Object ref = json_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           json_ = b;
           return b;
         } else {
@@ -4416,7 +4416,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setJson(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4459,13 +4459,13 @@ public final class MsgProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4476,18 +4476,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.MessageRequest)
-    private static final MessageRequest DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.MessageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new MessageRequest();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.MessageRequest();
     }
 
-    public static MessageRequest getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.MessageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<MessageRequest>
         PARSER = new com.google.protobuf.AbstractParser<MessageRequest>() {
-      @Override
+      @java.lang.Override
       public MessageRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4500,13 +4500,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MessageRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public MessageRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4544,7 +4544,7 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The debug.
      */
-    String getdebug();
+    java.lang.String getdebug();
     /**
      * <pre>
      * 信息
@@ -4594,14 +4594,14 @@ public final class MsgProto {
       debug_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new MessageResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4612,7 +4612,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -4635,7 +4635,7 @@ public final class MsgProto {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               debug_ = s;
               break;
@@ -4676,15 +4676,15 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MessageResponse.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.MessageResponse.class, com.liao.im.common.proto.MsgProto.MessageResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -4697,7 +4697,7 @@ public final class MsgProto {
      * <code>bool result = 1;</code>
      * @return The result.
      */
-    @Override
+    @java.lang.Override
     public boolean getResult() {
       return result_;
     }
@@ -4712,13 +4712,13 @@ public final class MsgProto {
      * <code>uint32 code = 2;</code>
      * @return The code.
      */
-    @Override
+    @java.lang.Override
     public int getCode() {
       return code_;
     }
 
     public static final int debug_FIELD_NUMBER = 3;
-    private volatile Object debug_;
+    private volatile java.lang.Object debug_;
     /**
      * <pre>
      * 信息
@@ -4727,15 +4727,15 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The debug.
      */
-    @Override
-    public String getdebug() {
-      Object ref = debug_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getdebug() {
+      java.lang.Object ref = debug_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         debug_ = s;
         return s;
       }
@@ -4748,14 +4748,14 @@ public final class MsgProto {
      * <code>string debug = 3;</code>
      * @return The bytes for debug.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getdebugBytes() {
-      Object ref = debug_;
-      if (ref instanceof String) {
+      java.lang.Object ref = debug_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         debug_ = b;
         return b;
       } else {
@@ -4773,7 +4773,7 @@ public final class MsgProto {
      * <code>uint32 expose = 4;</code>
      * @return The expose.
      */
-    @Override
+    @java.lang.Override
     public int getExpose() {
       return expose_;
     }
@@ -4784,7 +4784,7 @@ public final class MsgProto {
      * <code>bool last_block = 5;</code>
      * @return The lastBlock.
      */
-    @Override
+    @java.lang.Override
     public boolean getLastBlock() {
       return lastBlock_;
     }
@@ -4795,13 +4795,13 @@ public final class MsgProto {
      * <code>fixed32 block_index = 6;</code>
      * @return The blockIndex.
      */
-    @Override
+    @java.lang.Override
     public int getBlockIndex() {
       return blockIndex_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4811,7 +4811,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (result_ != false) {
@@ -4835,7 +4835,7 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4869,15 +4869,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof MessageResponse)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.MessageResponse)) {
         return super.equals(obj);
       }
-      MessageResponse other = (MessageResponse) obj;
+      com.liao.im.common.proto.MsgProto.MessageResponse other = (com.liao.im.common.proto.MsgProto.MessageResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -4895,7 +4895,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4921,69 +4921,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageResponse parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageResponse parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static MessageResponse parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageResponse parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4991,23 +4991,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(MessageResponse prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.MessageResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5017,18 +5017,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.MessageResponse)
-        MessageResponseOrBuilder {
+        com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MessageResponse.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.MessageResponse.class, com.liao.im.common.proto.MsgProto.MessageResponse.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.MessageResponse.newBuilder()
@@ -5037,7 +5037,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5046,7 +5046,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         result_ = false;
@@ -5064,29 +5064,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageResponse_descriptor;
       }
 
-      @Override
-      public MessageResponse getDefaultInstanceForType() {
-        return MessageResponse.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageResponse getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.MessageResponse.getDefaultInstance();
       }
 
-      @Override
-      public MessageResponse build() {
-        MessageResponse result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageResponse build() {
+        com.liao.im.common.proto.MsgProto.MessageResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public MessageResponse buildPartial() {
-        MessageResponse result = new MessageResponse(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageResponse buildPartial() {
+        com.liao.im.common.proto.MsgProto.MessageResponse result = new com.liao.im.common.proto.MsgProto.MessageResponse(this);
         result.result_ = result_;
         result.code_ = code_;
         result.debug_ = debug_;
@@ -5097,50 +5097,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MessageResponse) {
-          return mergeFrom((MessageResponse)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.MessageResponse) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.MessageResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MessageResponse other) {
-        if (other == MessageResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.MessageResponse other) {
+        if (other == com.liao.im.common.proto.MsgProto.MessageResponse.getDefaultInstance()) return this;
         if (other.getResult() != false) {
           setResult(other.getResult());
         }
@@ -5165,21 +5165,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MessageResponse parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.MessageResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MessageResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.MessageResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5198,7 +5198,7 @@ public final class MsgProto {
        * <code>bool result = 1;</code>
        * @return The result.
        */
-      @Override
+      @java.lang.Override
       public boolean getResult() {
         return result_;
       }
@@ -5241,7 +5241,7 @@ public final class MsgProto {
        * <code>uint32 code = 2;</code>
        * @return The code.
        */
-      @Override
+      @java.lang.Override
       public int getCode() {
         return code_;
       }
@@ -5275,7 +5275,7 @@ public final class MsgProto {
         return this;
       }
 
-      private Object debug_ = "";
+      private java.lang.Object debug_ = "";
       /**
        * <pre>
        * 信息
@@ -5284,16 +5284,16 @@ public final class MsgProto {
        * <code>string debug = 3;</code>
        * @return The debug.
        */
-      public String getdebug() {
-        Object ref = debug_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getdebug() {
+        java.lang.Object ref = debug_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           debug_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -5306,11 +5306,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getdebugBytes() {
-        Object ref = debug_;
+        java.lang.Object ref = debug_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           debug_ = b;
           return b;
         } else {
@@ -5327,7 +5327,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setdebug(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5380,7 +5380,7 @@ public final class MsgProto {
        * <code>uint32 expose = 4;</code>
        * @return The expose.
        */
-      @Override
+      @java.lang.Override
       public int getExpose() {
         return expose_;
       }
@@ -5419,7 +5419,7 @@ public final class MsgProto {
        * <code>bool last_block = 5;</code>
        * @return The lastBlock.
        */
-      @Override
+      @java.lang.Override
       public boolean getLastBlock() {
         return lastBlock_;
       }
@@ -5450,7 +5450,7 @@ public final class MsgProto {
        * <code>fixed32 block_index = 6;</code>
        * @return The blockIndex.
        */
-      @Override
+      @java.lang.Override
       public int getBlockIndex() {
         return blockIndex_;
       }
@@ -5475,13 +5475,13 @@ public final class MsgProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5492,18 +5492,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.MessageResponse)
-    private static final MessageResponse DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.MessageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new MessageResponse();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.MessageResponse();
     }
 
-    public static MessageResponse getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.MessageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<MessageResponse>
         PARSER = new com.google.protobuf.AbstractParser<MessageResponse>() {
-      @Override
+      @java.lang.Override
       public MessageResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5516,13 +5516,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MessageResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public MessageResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5548,7 +5548,7 @@ public final class MsgProto {
      * <code>string json = 3;</code>
      * @return The json.
      */
-    String getJson();
+    java.lang.String getJson();
     /**
      * <code>string json = 3;</code>
      * @return The bytes for json.
@@ -5560,7 +5560,7 @@ public final class MsgProto {
      * <code>string timestamp = 4;</code>
      * @return The timestamp.
      */
-    String getTimestamp();
+    java.lang.String getTimestamp();
     /**
      * <code>string timestamp = 4;</code>
      * @return The bytes for timestamp.
@@ -5586,14 +5586,14 @@ public final class MsgProto {
       timestamp_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new MessageNotification();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5604,7 +5604,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5627,13 +5627,13 @@ public final class MsgProto {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               json_ = s;
               break;
             }
             case 34: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               timestamp_ = s;
               break;
@@ -5659,15 +5659,15 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MessageNotification.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.MessageNotification.class, com.liao.im.common.proto.MsgProto.MessageNotification.Builder.class);
     }
 
     public static final int MSG_TYPE_FIELD_NUMBER = 1;
@@ -5676,7 +5676,7 @@ public final class MsgProto {
      * <code>uint32 msg_type = 1;</code>
      * @return The msgType.
      */
-    @Override
+    @java.lang.Override
     public int getMsgType() {
       return msgType_;
     }
@@ -5687,26 +5687,26 @@ public final class MsgProto {
      * <code>bytes sender = 2;</code>
      * @return The sender.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString getSender() {
       return sender_;
     }
 
     public static final int JSON_FIELD_NUMBER = 3;
-    private volatile Object json_;
+    private volatile java.lang.Object json_;
     /**
      * <code>string json = 3;</code>
      * @return The json.
      */
-    @Override
-    public String getJson() {
-      Object ref = json_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getJson() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         json_ = s;
         return s;
       }
@@ -5715,14 +5715,14 @@ public final class MsgProto {
      * <code>string json = 3;</code>
      * @return The bytes for json.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJsonBytes() {
-      Object ref = json_;
-      if (ref instanceof String) {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         json_ = b;
         return b;
       } else {
@@ -5731,20 +5731,20 @@ public final class MsgProto {
     }
 
     public static final int TIMESTAMP_FIELD_NUMBER = 4;
-    private volatile Object timestamp_;
+    private volatile java.lang.Object timestamp_;
     /**
      * <code>string timestamp = 4;</code>
      * @return The timestamp.
      */
-    @Override
-    public String getTimestamp() {
-      Object ref = timestamp_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getTimestamp() {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         timestamp_ = s;
         return s;
       }
@@ -5753,14 +5753,14 @@ public final class MsgProto {
      * <code>string timestamp = 4;</code>
      * @return The bytes for timestamp.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTimestampBytes() {
-      Object ref = timestamp_;
-      if (ref instanceof String) {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         timestamp_ = b;
         return b;
       } else {
@@ -5769,7 +5769,7 @@ public final class MsgProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5779,7 +5779,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (msgType_ != 0) {
@@ -5797,7 +5797,7 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5822,15 +5822,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof MessageNotification)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.MessageNotification)) {
         return super.equals(obj);
       }
-      MessageNotification other = (MessageNotification) obj;
+      com.liao.im.common.proto.MsgProto.MessageNotification other = (com.liao.im.common.proto.MsgProto.MessageNotification) obj;
 
       if (getMsgType()
           != other.getMsgType()) return false;
@@ -5844,7 +5844,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5864,69 +5864,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageNotification parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MessageNotification parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageNotification parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static MessageNotification parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MessageNotification parseFrom(
+    public static com.liao.im.common.proto.MsgProto.MessageNotification parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5934,23 +5934,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(MessageNotification prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.MessageNotification prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5960,18 +5960,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.MessageNotification)
-        MessageNotificationOrBuilder {
+        com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MessageNotification.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.MessageNotification.class, com.liao.im.common.proto.MsgProto.MessageNotification.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.MessageNotification.newBuilder()
@@ -5980,7 +5980,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5989,7 +5989,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         msgType_ = 0;
@@ -6003,29 +6003,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_MessageNotification_descriptor;
       }
 
-      @Override
-      public MessageNotification getDefaultInstanceForType() {
-        return MessageNotification.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageNotification getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.MessageNotification.getDefaultInstance();
       }
 
-      @Override
-      public MessageNotification build() {
-        MessageNotification result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageNotification build() {
+        com.liao.im.common.proto.MsgProto.MessageNotification result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public MessageNotification buildPartial() {
-        MessageNotification result = new MessageNotification(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.MessageNotification buildPartial() {
+        com.liao.im.common.proto.MsgProto.MessageNotification result = new com.liao.im.common.proto.MsgProto.MessageNotification(this);
         result.msgType_ = msgType_;
         result.sender_ = sender_;
         result.json_ = json_;
@@ -6034,50 +6034,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MessageNotification) {
-          return mergeFrom((MessageNotification)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.MessageNotification) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.MessageNotification)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MessageNotification other) {
-        if (other == MessageNotification.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.MessageNotification other) {
+        if (other == com.liao.im.common.proto.MsgProto.MessageNotification.getDefaultInstance()) return this;
         if (other.getMsgType() != 0) {
           setMsgType(other.getMsgType());
         }
@@ -6097,21 +6097,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MessageNotification parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.MessageNotification parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MessageNotification) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.MessageNotification) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6126,7 +6126,7 @@ public final class MsgProto {
        * <code>uint32 msg_type = 1;</code>
        * @return The msgType.
        */
-      @Override
+      @java.lang.Override
       public int getMsgType() {
         return msgType_;
       }
@@ -6157,7 +6157,7 @@ public final class MsgProto {
        * <code>bytes sender = 2;</code>
        * @return The sender.
        */
-      @Override
+      @java.lang.Override
       public com.google.protobuf.ByteString getSender() {
         return sender_;
       }
@@ -6186,21 +6186,21 @@ public final class MsgProto {
         return this;
       }
 
-      private Object json_ = "";
+      private java.lang.Object json_ = "";
       /**
        * <code>string json = 3;</code>
        * @return The json.
        */
-      public String getJson() {
-        Object ref = json_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getJson() {
+        java.lang.Object ref = json_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           json_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -6209,11 +6209,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getJsonBytes() {
-        Object ref = json_;
+        java.lang.Object ref = json_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           json_ = b;
           return b;
         } else {
@@ -6226,7 +6226,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setJson(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6262,21 +6262,21 @@ public final class MsgProto {
         return this;
       }
 
-      private Object timestamp_ = "";
+      private java.lang.Object timestamp_ = "";
       /**
        * <code>string timestamp = 4;</code>
        * @return The timestamp.
        */
-      public String getTimestamp() {
-        Object ref = timestamp_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getTimestamp() {
+        java.lang.Object ref = timestamp_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           timestamp_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -6285,11 +6285,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getTimestampBytes() {
-        Object ref = timestamp_;
+        java.lang.Object ref = timestamp_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           timestamp_ = b;
           return b;
         } else {
@@ -6302,7 +6302,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setTimestamp(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6337,13 +6337,13 @@ public final class MsgProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6354,18 +6354,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.MessageNotification)
-    private static final MessageNotification DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.MessageNotification DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new MessageNotification();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.MessageNotification();
     }
 
-    public static MessageNotification getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.MessageNotification getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<MessageNotification>
         PARSER = new com.google.protobuf.AbstractParser<MessageNotification>() {
-      @Override
+      @java.lang.Override
       public MessageNotification parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6378,13 +6378,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MessageNotification> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public MessageNotification getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageNotification getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6403,7 +6403,7 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
      * @return The type.
      */
-    HeadType getType();
+    com.liao.im.common.proto.MsgProto.HeadType getType();
 
     /**
      * <code>uint64 sequence = 2;</code>
@@ -6415,7 +6415,7 @@ public final class MsgProto {
      * <code>string session_id = 3;</code>
      * @return The sessionId.
      */
-    String getSessionId();
+    java.lang.String getSessionId();
     /**
      * <code>string session_id = 3;</code>
      * @return The bytes for sessionId.
@@ -6432,11 +6432,11 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
      * @return The loginRequest.
      */
-    LoginRequest getLoginRequest();
+    com.liao.im.common.proto.MsgProto.LoginRequest getLoginRequest();
     /**
      * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
      */
-    LoginRequestOrBuilder getLoginRequestOrBuilder();
+    com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder getLoginRequestOrBuilder();
 
     /**
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
@@ -6447,11 +6447,11 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
      * @return The loginResponse.
      */
-    LoginResponse getLoginResponse();
+    com.liao.im.common.proto.MsgProto.LoginResponse getLoginResponse();
     /**
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
      */
-    LoginResponseOrBuilder getLoginResponseOrBuilder();
+    com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder getLoginResponseOrBuilder();
 
     /**
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
@@ -6462,11 +6462,11 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
      * @return The messageRequest.
      */
-    MessageRequest getMessageRequest();
+    com.liao.im.common.proto.MsgProto.MessageRequest getMessageRequest();
     /**
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
      */
-    MessageRequestOrBuilder getMessageRequestOrBuilder();
+    com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder getMessageRequestOrBuilder();
 
     /**
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
@@ -6477,11 +6477,11 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
      * @return The messageResponse.
      */
-    MessageResponse getMessageResponse();
+    com.liao.im.common.proto.MsgProto.MessageResponse getMessageResponse();
     /**
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
      */
-    MessageResponseOrBuilder getMessageResponseOrBuilder();
+    com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder getMessageResponseOrBuilder();
 
     /**
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
@@ -6492,11 +6492,11 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
      * @return The notification.
      */
-    MessageNotification getNotification();
+    com.liao.im.common.proto.MsgProto.MessageNotification getNotification();
     /**
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
      */
-    MessageNotificationOrBuilder getNotificationOrBuilder();
+    com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder getNotificationOrBuilder();
   }
   /**
    * Protobuf type {@code com.liao.im.common.proto.Message}
@@ -6515,14 +6515,14 @@ public final class MsgProto {
       sessionId_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new Message();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6533,7 +6533,7 @@ public final class MsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -6557,17 +6557,17 @@ public final class MsgProto {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               sessionId_ = s;
               break;
             }
             case 34: {
-              LoginRequest.Builder subBuilder = null;
+              com.liao.im.common.proto.MsgProto.LoginRequest.Builder subBuilder = null;
               if (loginRequest_ != null) {
                 subBuilder = loginRequest_.toBuilder();
               }
-              loginRequest_ = input.readMessage(LoginRequest.parser(), extensionRegistry);
+              loginRequest_ = input.readMessage(com.liao.im.common.proto.MsgProto.LoginRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(loginRequest_);
                 loginRequest_ = subBuilder.buildPartial();
@@ -6576,11 +6576,11 @@ public final class MsgProto {
               break;
             }
             case 42: {
-              LoginResponse.Builder subBuilder = null;
+              com.liao.im.common.proto.MsgProto.LoginResponse.Builder subBuilder = null;
               if (loginResponse_ != null) {
                 subBuilder = loginResponse_.toBuilder();
               }
-              loginResponse_ = input.readMessage(LoginResponse.parser(), extensionRegistry);
+              loginResponse_ = input.readMessage(com.liao.im.common.proto.MsgProto.LoginResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(loginResponse_);
                 loginResponse_ = subBuilder.buildPartial();
@@ -6589,11 +6589,11 @@ public final class MsgProto {
               break;
             }
             case 50: {
-              MessageRequest.Builder subBuilder = null;
+              com.liao.im.common.proto.MsgProto.MessageRequest.Builder subBuilder = null;
               if (messageRequest_ != null) {
                 subBuilder = messageRequest_.toBuilder();
               }
-              messageRequest_ = input.readMessage(MessageRequest.parser(), extensionRegistry);
+              messageRequest_ = input.readMessage(com.liao.im.common.proto.MsgProto.MessageRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(messageRequest_);
                 messageRequest_ = subBuilder.buildPartial();
@@ -6602,11 +6602,11 @@ public final class MsgProto {
               break;
             }
             case 58: {
-              MessageResponse.Builder subBuilder = null;
+              com.liao.im.common.proto.MsgProto.MessageResponse.Builder subBuilder = null;
               if (messageResponse_ != null) {
                 subBuilder = messageResponse_.toBuilder();
               }
-              messageResponse_ = input.readMessage(MessageResponse.parser(), extensionRegistry);
+              messageResponse_ = input.readMessage(com.liao.im.common.proto.MsgProto.MessageResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(messageResponse_);
                 messageResponse_ = subBuilder.buildPartial();
@@ -6615,11 +6615,11 @@ public final class MsgProto {
               break;
             }
             case 66: {
-              MessageNotification.Builder subBuilder = null;
+              com.liao.im.common.proto.MsgProto.MessageNotification.Builder subBuilder = null;
               if (notification_ != null) {
                 subBuilder = notification_.toBuilder();
               }
-              notification_ = input.readMessage(MessageNotification.parser(), extensionRegistry);
+              notification_ = input.readMessage(com.liao.im.common.proto.MsgProto.MessageNotification.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(notification_);
                 notification_ = subBuilder.buildPartial();
@@ -6648,15 +6648,15 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MsgProto.internal_static_com_liao_im_common_proto_Message_fieldAccessorTable
+      return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_Message_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Message.class, Builder.class);
+              com.liao.im.common.proto.MsgProto.Message.class, com.liao.im.common.proto.MsgProto.Message.Builder.class);
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
@@ -6665,17 +6665,17 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    @Override public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
      * @return The type.
      */
-    @Override public HeadType getType() {
+    @java.lang.Override public com.liao.im.common.proto.MsgProto.HeadType getType() {
       @SuppressWarnings("deprecation")
-      HeadType result = HeadType.valueOf(type_);
-      return result == null ? HeadType.UNRECOGNIZED : result;
+      com.liao.im.common.proto.MsgProto.HeadType result = com.liao.im.common.proto.MsgProto.HeadType.valueOf(type_);
+      return result == null ? com.liao.im.common.proto.MsgProto.HeadType.UNRECOGNIZED : result;
     }
 
     public static final int SEQUENCE_FIELD_NUMBER = 2;
@@ -6684,26 +6684,26 @@ public final class MsgProto {
      * <code>uint64 sequence = 2;</code>
      * @return The sequence.
      */
-    @Override
+    @java.lang.Override
     public long getSequence() {
       return sequence_;
     }
 
     public static final int SESSION_ID_FIELD_NUMBER = 3;
-    private volatile Object sessionId_;
+    private volatile java.lang.Object sessionId_;
     /**
      * <code>string session_id = 3;</code>
      * @return The sessionId.
      */
-    @Override
-    public String getSessionId() {
-      Object ref = sessionId_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         sessionId_ = s;
         return s;
       }
@@ -6712,14 +6712,14 @@ public final class MsgProto {
      * <code>string session_id = 3;</code>
      * @return The bytes for sessionId.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      Object ref = sessionId_;
-      if (ref instanceof String) {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         sessionId_ = b;
         return b;
       } else {
@@ -6728,12 +6728,12 @@ public final class MsgProto {
     }
 
     public static final int LOGINREQUEST_FIELD_NUMBER = 4;
-    private LoginRequest loginRequest_;
+    private com.liao.im.common.proto.MsgProto.LoginRequest loginRequest_;
     /**
      * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
      * @return Whether the loginRequest field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasLoginRequest() {
       return loginRequest_ != null;
     }
@@ -6741,25 +6741,25 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
      * @return The loginRequest.
      */
-    @Override
-    public LoginRequest getLoginRequest() {
-      return loginRequest_ == null ? LoginRequest.getDefaultInstance() : loginRequest_;
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginRequest getLoginRequest() {
+      return loginRequest_ == null ? com.liao.im.common.proto.MsgProto.LoginRequest.getDefaultInstance() : loginRequest_;
     }
     /**
      * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
      */
-    @Override
-    public LoginRequestOrBuilder getLoginRequestOrBuilder() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder getLoginRequestOrBuilder() {
       return getLoginRequest();
     }
 
     public static final int LOGINRESPONSE_FIELD_NUMBER = 5;
-    private LoginResponse loginResponse_;
+    private com.liao.im.common.proto.MsgProto.LoginResponse loginResponse_;
     /**
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
      * @return Whether the loginResponse field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasLoginResponse() {
       return loginResponse_ != null;
     }
@@ -6767,25 +6767,25 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
      * @return The loginResponse.
      */
-    @Override
-    public LoginResponse getLoginResponse() {
-      return loginResponse_ == null ? LoginResponse.getDefaultInstance() : loginResponse_;
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginResponse getLoginResponse() {
+      return loginResponse_ == null ? com.liao.im.common.proto.MsgProto.LoginResponse.getDefaultInstance() : loginResponse_;
     }
     /**
      * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
      */
-    @Override
-    public LoginResponseOrBuilder getLoginResponseOrBuilder() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder getLoginResponseOrBuilder() {
       return getLoginResponse();
     }
 
     public static final int MESSAGEREQUEST_FIELD_NUMBER = 6;
-    private MessageRequest messageRequest_;
+    private com.liao.im.common.proto.MsgProto.MessageRequest messageRequest_;
     /**
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
      * @return Whether the messageRequest field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasMessageRequest() {
       return messageRequest_ != null;
     }
@@ -6793,25 +6793,25 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
      * @return The messageRequest.
      */
-    @Override
-    public MessageRequest getMessageRequest() {
-      return messageRequest_ == null ? MessageRequest.getDefaultInstance() : messageRequest_;
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageRequest getMessageRequest() {
+      return messageRequest_ == null ? com.liao.im.common.proto.MsgProto.MessageRequest.getDefaultInstance() : messageRequest_;
     }
     /**
      * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
      */
-    @Override
-    public MessageRequestOrBuilder getMessageRequestOrBuilder() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder getMessageRequestOrBuilder() {
       return getMessageRequest();
     }
 
     public static final int MESSAGERESPONSE_FIELD_NUMBER = 7;
-    private MessageResponse messageResponse_;
+    private com.liao.im.common.proto.MsgProto.MessageResponse messageResponse_;
     /**
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
      * @return Whether the messageResponse field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasMessageResponse() {
       return messageResponse_ != null;
     }
@@ -6819,25 +6819,25 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
      * @return The messageResponse.
      */
-    @Override
-    public MessageResponse getMessageResponse() {
-      return messageResponse_ == null ? MessageResponse.getDefaultInstance() : messageResponse_;
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageResponse getMessageResponse() {
+      return messageResponse_ == null ? com.liao.im.common.proto.MsgProto.MessageResponse.getDefaultInstance() : messageResponse_;
     }
     /**
      * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
      */
-    @Override
-    public MessageResponseOrBuilder getMessageResponseOrBuilder() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder getMessageResponseOrBuilder() {
       return getMessageResponse();
     }
 
     public static final int NOTIFICATION_FIELD_NUMBER = 8;
-    private MessageNotification notification_;
+    private com.liao.im.common.proto.MsgProto.MessageNotification notification_;
     /**
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
      * @return Whether the notification field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasNotification() {
       return notification_ != null;
     }
@@ -6845,20 +6845,20 @@ public final class MsgProto {
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
      * @return The notification.
      */
-    @Override
-    public MessageNotification getNotification() {
-      return notification_ == null ? MessageNotification.getDefaultInstance() : notification_;
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageNotification getNotification() {
+      return notification_ == null ? com.liao.im.common.proto.MsgProto.MessageNotification.getDefaultInstance() : notification_;
     }
     /**
      * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
      */
-    @Override
-    public MessageNotificationOrBuilder getNotificationOrBuilder() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder getNotificationOrBuilder() {
       return getNotification();
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6868,10 +6868,10 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != HeadType.LOGIN_REQUEST.getNumber()) {
+      if (type_ != com.liao.im.common.proto.MsgProto.HeadType.LOGIN_REQUEST.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (sequence_ != 0L) {
@@ -6898,13 +6898,13 @@ public final class MsgProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != HeadType.LOGIN_REQUEST.getNumber()) {
+      if (type_ != com.liao.im.common.proto.MsgProto.HeadType.LOGIN_REQUEST.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -6940,15 +6940,15 @@ public final class MsgProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Message)) {
+      if (!(obj instanceof com.liao.im.common.proto.MsgProto.Message)) {
         return super.equals(obj);
       }
-      Message other = (Message) obj;
+      com.liao.im.common.proto.MsgProto.Message other = (com.liao.im.common.proto.MsgProto.Message) obj;
 
       if (type_ != other.type_) return false;
       if (getSequence()
@@ -6984,7 +6984,7 @@ public final class MsgProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -7023,69 +7023,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Message parseFrom(byte[] data)
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Message parseFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Message parseDelimitedFrom(java.io.InputStream input)
+    public static com.liao.im.common.proto.MsgProto.Message parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Message parseDelimitedFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Message parseFrom(
+    public static com.liao.im.common.proto.MsgProto.Message parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7093,23 +7093,23 @@ public final class MsgProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Message prototype) {
+    public static Builder newBuilder(com.liao.im.common.proto.MsgProto.Message prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7119,18 +7119,18 @@ public final class MsgProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.liao.im.common.proto.Message)
-        MessageOrBuilder {
+        com.liao.im.common.proto.MsgProto.MessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MsgProto.internal_static_com_liao_im_common_proto_Message_fieldAccessorTable
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_Message_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Message.class, Builder.class);
+                com.liao.im.common.proto.MsgProto.Message.class, com.liao.im.common.proto.MsgProto.Message.Builder.class);
       }
 
       // Construct using com.liao.im.common.proto.MsgProto.Message.newBuilder()
@@ -7139,7 +7139,7 @@ public final class MsgProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7148,7 +7148,7 @@ public final class MsgProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -7190,29 +7190,29 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
+        return com.liao.im.common.proto.MsgProto.internal_static_com_liao_im_common_proto_Message_descriptor;
       }
 
-      @Override
-      public Message getDefaultInstanceForType() {
-        return Message.getDefaultInstance();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.Message getDefaultInstanceForType() {
+        return com.liao.im.common.proto.MsgProto.Message.getDefaultInstance();
       }
 
-      @Override
-      public Message build() {
-        Message result = buildPartial();
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.Message build() {
+        com.liao.im.common.proto.MsgProto.Message result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public Message buildPartial() {
-        Message result = new Message(this);
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.Message buildPartial() {
+        com.liao.im.common.proto.MsgProto.Message result = new com.liao.im.common.proto.MsgProto.Message(this);
         result.type_ = type_;
         result.sequence_ = sequence_;
         result.sessionId_ = sessionId_;
@@ -7245,50 +7245,50 @@ public final class MsgProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Message) {
-          return mergeFrom((Message)other);
+        if (other instanceof com.liao.im.common.proto.MsgProto.Message) {
+          return mergeFrom((com.liao.im.common.proto.MsgProto.Message)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Message other) {
-        if (other == Message.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.liao.im.common.proto.MsgProto.Message other) {
+        if (other == com.liao.im.common.proto.MsgProto.Message.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -7319,21 +7319,21 @@ public final class MsgProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Message parsedMessage = null;
+        com.liao.im.common.proto.MsgProto.Message parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Message) e.getUnfinishedMessage();
+          parsedMessage = (com.liao.im.common.proto.MsgProto.Message) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7348,7 +7348,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
-      @Override public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -7366,18 +7366,18 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
        * @return The type.
        */
-      @Override
-      public HeadType getType() {
+      @java.lang.Override
+      public com.liao.im.common.proto.MsgProto.HeadType getType() {
         @SuppressWarnings("deprecation")
-        HeadType result = HeadType.valueOf(type_);
-        return result == null ? HeadType.UNRECOGNIZED : result;
+        com.liao.im.common.proto.MsgProto.HeadType result = com.liao.im.common.proto.MsgProto.HeadType.valueOf(type_);
+        return result == null ? com.liao.im.common.proto.MsgProto.HeadType.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.liao.im.common.proto.HeadType type = 1;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(HeadType value) {
+      public Builder setType(com.liao.im.common.proto.MsgProto.HeadType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7402,7 +7402,7 @@ public final class MsgProto {
        * <code>uint64 sequence = 2;</code>
        * @return The sequence.
        */
-      @Override
+      @java.lang.Override
       public long getSequence() {
         return sequence_;
       }
@@ -7428,21 +7428,21 @@ public final class MsgProto {
         return this;
       }
 
-      private Object sessionId_ = "";
+      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 3;</code>
        * @return The sessionId.
        */
-      public String getSessionId() {
-        Object ref = sessionId_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getSessionId() {
+        java.lang.Object ref = sessionId_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           sessionId_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -7451,11 +7451,11 @@ public final class MsgProto {
        */
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        Object ref = sessionId_;
+        java.lang.Object ref = sessionId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           sessionId_ = b;
           return b;
         } else {
@@ -7468,7 +7468,7 @@ public final class MsgProto {
        * @return This builder for chaining.
        */
       public Builder setSessionId(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7504,9 +7504,9 @@ public final class MsgProto {
         return this;
       }
 
-      private LoginRequest loginRequest_;
+      private com.liao.im.common.proto.MsgProto.LoginRequest loginRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder> loginRequestBuilder_;
+          com.liao.im.common.proto.MsgProto.LoginRequest, com.liao.im.common.proto.MsgProto.LoginRequest.Builder, com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder> loginRequestBuilder_;
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        * @return Whether the loginRequest field is set.
@@ -7518,9 +7518,9 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        * @return The loginRequest.
        */
-      public LoginRequest getLoginRequest() {
+      public com.liao.im.common.proto.MsgProto.LoginRequest getLoginRequest() {
         if (loginRequestBuilder_ == null) {
-          return loginRequest_ == null ? LoginRequest.getDefaultInstance() : loginRequest_;
+          return loginRequest_ == null ? com.liao.im.common.proto.MsgProto.LoginRequest.getDefaultInstance() : loginRequest_;
         } else {
           return loginRequestBuilder_.getMessage();
         }
@@ -7528,7 +7528,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
-      public Builder setLoginRequest(LoginRequest value) {
+      public Builder setLoginRequest(com.liao.im.common.proto.MsgProto.LoginRequest value) {
         if (loginRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7545,7 +7545,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
       public Builder setLoginRequest(
-          LoginRequest.Builder builderForValue) {
+          com.liao.im.common.proto.MsgProto.LoginRequest.Builder builderForValue) {
         if (loginRequestBuilder_ == null) {
           loginRequest_ = builderForValue.build();
           onChanged();
@@ -7558,11 +7558,11 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
-      public Builder mergeLoginRequest(LoginRequest value) {
+      public Builder mergeLoginRequest(com.liao.im.common.proto.MsgProto.LoginRequest value) {
         if (loginRequestBuilder_ == null) {
           if (loginRequest_ != null) {
             loginRequest_ =
-              LoginRequest.newBuilder(loginRequest_).mergeFrom(value).buildPartial();
+              com.liao.im.common.proto.MsgProto.LoginRequest.newBuilder(loginRequest_).mergeFrom(value).buildPartial();
           } else {
             loginRequest_ = value;
           }
@@ -7590,7 +7590,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
-      public LoginRequest.Builder getLoginRequestBuilder() {
+      public com.liao.im.common.proto.MsgProto.LoginRequest.Builder getLoginRequestBuilder() {
         
         onChanged();
         return getLoginRequestFieldBuilder().getBuilder();
@@ -7598,23 +7598,23 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
-      public LoginRequestOrBuilder getLoginRequestOrBuilder() {
+      public com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder getLoginRequestOrBuilder() {
         if (loginRequestBuilder_ != null) {
           return loginRequestBuilder_.getMessageOrBuilder();
         } else {
           return loginRequest_ == null ?
-              LoginRequest.getDefaultInstance() : loginRequest_;
+              com.liao.im.common.proto.MsgProto.LoginRequest.getDefaultInstance() : loginRequest_;
         }
       }
       /**
        * <code>.com.liao.im.common.proto.LoginRequest loginRequest = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder>
+          com.liao.im.common.proto.MsgProto.LoginRequest, com.liao.im.common.proto.MsgProto.LoginRequest.Builder, com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder> 
           getLoginRequestFieldBuilder() {
         if (loginRequestBuilder_ == null) {
           loginRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder>(
+              com.liao.im.common.proto.MsgProto.LoginRequest, com.liao.im.common.proto.MsgProto.LoginRequest.Builder, com.liao.im.common.proto.MsgProto.LoginRequestOrBuilder>(
                   getLoginRequest(),
                   getParentForChildren(),
                   isClean());
@@ -7623,9 +7623,9 @@ public final class MsgProto {
         return loginRequestBuilder_;
       }
 
-      private LoginResponse loginResponse_;
+      private com.liao.im.common.proto.MsgProto.LoginResponse loginResponse_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder> loginResponseBuilder_;
+          com.liao.im.common.proto.MsgProto.LoginResponse, com.liao.im.common.proto.MsgProto.LoginResponse.Builder, com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder> loginResponseBuilder_;
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        * @return Whether the loginResponse field is set.
@@ -7637,9 +7637,9 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        * @return The loginResponse.
        */
-      public LoginResponse getLoginResponse() {
+      public com.liao.im.common.proto.MsgProto.LoginResponse getLoginResponse() {
         if (loginResponseBuilder_ == null) {
-          return loginResponse_ == null ? LoginResponse.getDefaultInstance() : loginResponse_;
+          return loginResponse_ == null ? com.liao.im.common.proto.MsgProto.LoginResponse.getDefaultInstance() : loginResponse_;
         } else {
           return loginResponseBuilder_.getMessage();
         }
@@ -7647,7 +7647,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
-      public Builder setLoginResponse(LoginResponse value) {
+      public Builder setLoginResponse(com.liao.im.common.proto.MsgProto.LoginResponse value) {
         if (loginResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7664,7 +7664,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
       public Builder setLoginResponse(
-          LoginResponse.Builder builderForValue) {
+          com.liao.im.common.proto.MsgProto.LoginResponse.Builder builderForValue) {
         if (loginResponseBuilder_ == null) {
           loginResponse_ = builderForValue.build();
           onChanged();
@@ -7677,11 +7677,11 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
-      public Builder mergeLoginResponse(LoginResponse value) {
+      public Builder mergeLoginResponse(com.liao.im.common.proto.MsgProto.LoginResponse value) {
         if (loginResponseBuilder_ == null) {
           if (loginResponse_ != null) {
             loginResponse_ =
-              LoginResponse.newBuilder(loginResponse_).mergeFrom(value).buildPartial();
+              com.liao.im.common.proto.MsgProto.LoginResponse.newBuilder(loginResponse_).mergeFrom(value).buildPartial();
           } else {
             loginResponse_ = value;
           }
@@ -7709,7 +7709,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
-      public LoginResponse.Builder getLoginResponseBuilder() {
+      public com.liao.im.common.proto.MsgProto.LoginResponse.Builder getLoginResponseBuilder() {
         
         onChanged();
         return getLoginResponseFieldBuilder().getBuilder();
@@ -7717,23 +7717,23 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
-      public LoginResponseOrBuilder getLoginResponseOrBuilder() {
+      public com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder getLoginResponseOrBuilder() {
         if (loginResponseBuilder_ != null) {
           return loginResponseBuilder_.getMessageOrBuilder();
         } else {
           return loginResponse_ == null ?
-              LoginResponse.getDefaultInstance() : loginResponse_;
+              com.liao.im.common.proto.MsgProto.LoginResponse.getDefaultInstance() : loginResponse_;
         }
       }
       /**
        * <code>.com.liao.im.common.proto.LoginResponse loginResponse = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder>
+          com.liao.im.common.proto.MsgProto.LoginResponse, com.liao.im.common.proto.MsgProto.LoginResponse.Builder, com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder> 
           getLoginResponseFieldBuilder() {
         if (loginResponseBuilder_ == null) {
           loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder>(
+              com.liao.im.common.proto.MsgProto.LoginResponse, com.liao.im.common.proto.MsgProto.LoginResponse.Builder, com.liao.im.common.proto.MsgProto.LoginResponseOrBuilder>(
                   getLoginResponse(),
                   getParentForChildren(),
                   isClean());
@@ -7742,9 +7742,9 @@ public final class MsgProto {
         return loginResponseBuilder_;
       }
 
-      private MessageRequest messageRequest_;
+      private com.liao.im.common.proto.MsgProto.MessageRequest messageRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageRequest, MessageRequest.Builder, MessageRequestOrBuilder> messageRequestBuilder_;
+          com.liao.im.common.proto.MsgProto.MessageRequest, com.liao.im.common.proto.MsgProto.MessageRequest.Builder, com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder> messageRequestBuilder_;
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        * @return Whether the messageRequest field is set.
@@ -7756,9 +7756,9 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        * @return The messageRequest.
        */
-      public MessageRequest getMessageRequest() {
+      public com.liao.im.common.proto.MsgProto.MessageRequest getMessageRequest() {
         if (messageRequestBuilder_ == null) {
-          return messageRequest_ == null ? MessageRequest.getDefaultInstance() : messageRequest_;
+          return messageRequest_ == null ? com.liao.im.common.proto.MsgProto.MessageRequest.getDefaultInstance() : messageRequest_;
         } else {
           return messageRequestBuilder_.getMessage();
         }
@@ -7766,7 +7766,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
-      public Builder setMessageRequest(MessageRequest value) {
+      public Builder setMessageRequest(com.liao.im.common.proto.MsgProto.MessageRequest value) {
         if (messageRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7783,7 +7783,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
       public Builder setMessageRequest(
-          MessageRequest.Builder builderForValue) {
+          com.liao.im.common.proto.MsgProto.MessageRequest.Builder builderForValue) {
         if (messageRequestBuilder_ == null) {
           messageRequest_ = builderForValue.build();
           onChanged();
@@ -7796,11 +7796,11 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
-      public Builder mergeMessageRequest(MessageRequest value) {
+      public Builder mergeMessageRequest(com.liao.im.common.proto.MsgProto.MessageRequest value) {
         if (messageRequestBuilder_ == null) {
           if (messageRequest_ != null) {
             messageRequest_ =
-              MessageRequest.newBuilder(messageRequest_).mergeFrom(value).buildPartial();
+              com.liao.im.common.proto.MsgProto.MessageRequest.newBuilder(messageRequest_).mergeFrom(value).buildPartial();
           } else {
             messageRequest_ = value;
           }
@@ -7828,7 +7828,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
-      public MessageRequest.Builder getMessageRequestBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageRequest.Builder getMessageRequestBuilder() {
         
         onChanged();
         return getMessageRequestFieldBuilder().getBuilder();
@@ -7836,23 +7836,23 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
-      public MessageRequestOrBuilder getMessageRequestOrBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder getMessageRequestOrBuilder() {
         if (messageRequestBuilder_ != null) {
           return messageRequestBuilder_.getMessageOrBuilder();
         } else {
           return messageRequest_ == null ?
-              MessageRequest.getDefaultInstance() : messageRequest_;
+              com.liao.im.common.proto.MsgProto.MessageRequest.getDefaultInstance() : messageRequest_;
         }
       }
       /**
        * <code>.com.liao.im.common.proto.MessageRequest messageRequest = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageRequest, MessageRequest.Builder, MessageRequestOrBuilder>
+          com.liao.im.common.proto.MsgProto.MessageRequest, com.liao.im.common.proto.MsgProto.MessageRequest.Builder, com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder> 
           getMessageRequestFieldBuilder() {
         if (messageRequestBuilder_ == null) {
           messageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              MessageRequest, MessageRequest.Builder, MessageRequestOrBuilder>(
+              com.liao.im.common.proto.MsgProto.MessageRequest, com.liao.im.common.proto.MsgProto.MessageRequest.Builder, com.liao.im.common.proto.MsgProto.MessageRequestOrBuilder>(
                   getMessageRequest(),
                   getParentForChildren(),
                   isClean());
@@ -7861,9 +7861,9 @@ public final class MsgProto {
         return messageRequestBuilder_;
       }
 
-      private MessageResponse messageResponse_;
+      private com.liao.im.common.proto.MsgProto.MessageResponse messageResponse_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageResponse, MessageResponse.Builder, MessageResponseOrBuilder> messageResponseBuilder_;
+          com.liao.im.common.proto.MsgProto.MessageResponse, com.liao.im.common.proto.MsgProto.MessageResponse.Builder, com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder> messageResponseBuilder_;
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        * @return Whether the messageResponse field is set.
@@ -7875,9 +7875,9 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        * @return The messageResponse.
        */
-      public MessageResponse getMessageResponse() {
+      public com.liao.im.common.proto.MsgProto.MessageResponse getMessageResponse() {
         if (messageResponseBuilder_ == null) {
-          return messageResponse_ == null ? MessageResponse.getDefaultInstance() : messageResponse_;
+          return messageResponse_ == null ? com.liao.im.common.proto.MsgProto.MessageResponse.getDefaultInstance() : messageResponse_;
         } else {
           return messageResponseBuilder_.getMessage();
         }
@@ -7885,7 +7885,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
-      public Builder setMessageResponse(MessageResponse value) {
+      public Builder setMessageResponse(com.liao.im.common.proto.MsgProto.MessageResponse value) {
         if (messageResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7902,7 +7902,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
       public Builder setMessageResponse(
-          MessageResponse.Builder builderForValue) {
+          com.liao.im.common.proto.MsgProto.MessageResponse.Builder builderForValue) {
         if (messageResponseBuilder_ == null) {
           messageResponse_ = builderForValue.build();
           onChanged();
@@ -7915,11 +7915,11 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
-      public Builder mergeMessageResponse(MessageResponse value) {
+      public Builder mergeMessageResponse(com.liao.im.common.proto.MsgProto.MessageResponse value) {
         if (messageResponseBuilder_ == null) {
           if (messageResponse_ != null) {
             messageResponse_ =
-              MessageResponse.newBuilder(messageResponse_).mergeFrom(value).buildPartial();
+              com.liao.im.common.proto.MsgProto.MessageResponse.newBuilder(messageResponse_).mergeFrom(value).buildPartial();
           } else {
             messageResponse_ = value;
           }
@@ -7947,7 +7947,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
-      public MessageResponse.Builder getMessageResponseBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageResponse.Builder getMessageResponseBuilder() {
         
         onChanged();
         return getMessageResponseFieldBuilder().getBuilder();
@@ -7955,23 +7955,23 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
-      public MessageResponseOrBuilder getMessageResponseOrBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder getMessageResponseOrBuilder() {
         if (messageResponseBuilder_ != null) {
           return messageResponseBuilder_.getMessageOrBuilder();
         } else {
           return messageResponse_ == null ?
-              MessageResponse.getDefaultInstance() : messageResponse_;
+              com.liao.im.common.proto.MsgProto.MessageResponse.getDefaultInstance() : messageResponse_;
         }
       }
       /**
        * <code>.com.liao.im.common.proto.MessageResponse messageResponse = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageResponse, MessageResponse.Builder, MessageResponseOrBuilder>
+          com.liao.im.common.proto.MsgProto.MessageResponse, com.liao.im.common.proto.MsgProto.MessageResponse.Builder, com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder> 
           getMessageResponseFieldBuilder() {
         if (messageResponseBuilder_ == null) {
           messageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              MessageResponse, MessageResponse.Builder, MessageResponseOrBuilder>(
+              com.liao.im.common.proto.MsgProto.MessageResponse, com.liao.im.common.proto.MsgProto.MessageResponse.Builder, com.liao.im.common.proto.MsgProto.MessageResponseOrBuilder>(
                   getMessageResponse(),
                   getParentForChildren(),
                   isClean());
@@ -7980,9 +7980,9 @@ public final class MsgProto {
         return messageResponseBuilder_;
       }
 
-      private MessageNotification notification_;
+      private com.liao.im.common.proto.MsgProto.MessageNotification notification_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageNotification, MessageNotification.Builder, MessageNotificationOrBuilder> notificationBuilder_;
+          com.liao.im.common.proto.MsgProto.MessageNotification, com.liao.im.common.proto.MsgProto.MessageNotification.Builder, com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder> notificationBuilder_;
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        * @return Whether the notification field is set.
@@ -7994,9 +7994,9 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        * @return The notification.
        */
-      public MessageNotification getNotification() {
+      public com.liao.im.common.proto.MsgProto.MessageNotification getNotification() {
         if (notificationBuilder_ == null) {
-          return notification_ == null ? MessageNotification.getDefaultInstance() : notification_;
+          return notification_ == null ? com.liao.im.common.proto.MsgProto.MessageNotification.getDefaultInstance() : notification_;
         } else {
           return notificationBuilder_.getMessage();
         }
@@ -8004,7 +8004,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
-      public Builder setNotification(MessageNotification value) {
+      public Builder setNotification(com.liao.im.common.proto.MsgProto.MessageNotification value) {
         if (notificationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8021,7 +8021,7 @@ public final class MsgProto {
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
       public Builder setNotification(
-          MessageNotification.Builder builderForValue) {
+          com.liao.im.common.proto.MsgProto.MessageNotification.Builder builderForValue) {
         if (notificationBuilder_ == null) {
           notification_ = builderForValue.build();
           onChanged();
@@ -8034,11 +8034,11 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
-      public Builder mergeNotification(MessageNotification value) {
+      public Builder mergeNotification(com.liao.im.common.proto.MsgProto.MessageNotification value) {
         if (notificationBuilder_ == null) {
           if (notification_ != null) {
             notification_ =
-              MessageNotification.newBuilder(notification_).mergeFrom(value).buildPartial();
+              com.liao.im.common.proto.MsgProto.MessageNotification.newBuilder(notification_).mergeFrom(value).buildPartial();
           } else {
             notification_ = value;
           }
@@ -8066,7 +8066,7 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
-      public MessageNotification.Builder getNotificationBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageNotification.Builder getNotificationBuilder() {
         
         onChanged();
         return getNotificationFieldBuilder().getBuilder();
@@ -8074,23 +8074,23 @@ public final class MsgProto {
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
-      public MessageNotificationOrBuilder getNotificationOrBuilder() {
+      public com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder getNotificationOrBuilder() {
         if (notificationBuilder_ != null) {
           return notificationBuilder_.getMessageOrBuilder();
         } else {
           return notification_ == null ?
-              MessageNotification.getDefaultInstance() : notification_;
+              com.liao.im.common.proto.MsgProto.MessageNotification.getDefaultInstance() : notification_;
         }
       }
       /**
        * <code>.com.liao.im.common.proto.MessageNotification notification = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          MessageNotification, MessageNotification.Builder, MessageNotificationOrBuilder>
+          com.liao.im.common.proto.MsgProto.MessageNotification, com.liao.im.common.proto.MsgProto.MessageNotification.Builder, com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder> 
           getNotificationFieldBuilder() {
         if (notificationBuilder_ == null) {
           notificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              MessageNotification, MessageNotification.Builder, MessageNotificationOrBuilder>(
+              com.liao.im.common.proto.MsgProto.MessageNotification, com.liao.im.common.proto.MsgProto.MessageNotification.Builder, com.liao.im.common.proto.MsgProto.MessageNotificationOrBuilder>(
                   getNotification(),
                   getParentForChildren(),
                   isClean());
@@ -8098,13 +8098,13 @@ public final class MsgProto {
         }
         return notificationBuilder_;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8115,18 +8115,18 @@ public final class MsgProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.liao.im.common.proto.Message)
-    private static final Message DEFAULT_INSTANCE;
+    private static final com.liao.im.common.proto.MsgProto.Message DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Message();
+      DEFAULT_INSTANCE = new com.liao.im.common.proto.MsgProto.Message();
     }
 
-    public static Message getDefaultInstance() {
+    public static com.liao.im.common.proto.MsgProto.Message getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Message>
         PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      @Override
+      @java.lang.Override
       public Message parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8139,13 +8139,13 @@ public final class MsgProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Message> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public Message getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.liao.im.common.proto.MsgProto.Message getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8189,7 +8189,7 @@ public final class MsgProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\024proto/msgProto.proto\022\030com.liao.im.comm" +
       "on.proto\"c\n\014LoginRequest\022\013\n\003uid\030\001 \001(\t\022\020\n" +
       "\010deviceId\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\022\020\n\010platfo" +
@@ -8236,37 +8236,37 @@ public final class MsgProto {
     internal_static_com_liao_im_common_proto_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_LoginRequest_descriptor,
-        new String[] { "Uid", "DeviceId", "Token", "Platform", "AppVersion", });
+        new java.lang.String[] { "Uid", "DeviceId", "Token", "Platform", "AppVersion", });
     internal_static_com_liao_im_common_proto_LoginResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_liao_im_common_proto_LoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_LoginResponse_descriptor,
-        new String[] { "Result", "Code", "debug", "Expose", });
+        new java.lang.String[] { "Result", "Code", "debug", "Expose", });
     internal_static_com_liao_im_common_proto_MessageRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_liao_im_common_proto_MessageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_MessageRequest_descriptor,
-        new String[] { "MsgId", "From", "To", "Time", "MsgType", "Content", "Url", "Property", "FromNick", "Json", });
+        new java.lang.String[] { "MsgId", "From", "To", "Time", "MsgType", "Content", "Url", "Property", "FromNick", "Json", });
     internal_static_com_liao_im_common_proto_MessageResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_liao_im_common_proto_MessageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_MessageResponse_descriptor,
-        new String[] { "Result", "Code", "debug", "Expose", "LastBlock", "BlockIndex", });
+        new java.lang.String[] { "Result", "Code", "debug", "Expose", "LastBlock", "BlockIndex", });
     internal_static_com_liao_im_common_proto_MessageNotification_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_liao_im_common_proto_MessageNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_MessageNotification_descriptor,
-        new String[] { "MsgType", "Sender", "Json", "Timestamp", });
+        new java.lang.String[] { "MsgType", "Sender", "Json", "Timestamp", });
     internal_static_com_liao_im_common_proto_Message_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_liao_im_common_proto_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_liao_im_common_proto_Message_descriptor,
-        new String[] { "Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "MessageResponse", "Notification", });
+        new java.lang.String[] { "Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "MessageResponse", "Notification", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
