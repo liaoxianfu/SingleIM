@@ -6,6 +6,8 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 
 /**
+ * 注册所有的handler
+ *
  * @author liao
  * create at 2022:02:27  21:09
  */

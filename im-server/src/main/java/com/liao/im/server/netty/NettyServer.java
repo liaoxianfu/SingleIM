@@ -23,7 +23,7 @@ public class NettyServer {
 
     public void run() {
         final ServerBootstrap b = new ServerBootstrap();
-        log.info("netty port: {}", port);
+        log.info("work  thread :{} netty port: {}", workThread, port);
         final NioEventLoopGroup boosGroup = new NioEventLoopGroup(1);
         setWorkerThread();
         final NioEventLoopGroup workGroup = new NioEventLoopGroup(workThread);
