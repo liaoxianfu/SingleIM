@@ -1,0 +1,94 @@
+// 使用proto3
+syntax = "proto3";
+// 文件所在包路径
+package com.liao.im.common.proto;
+
+option java_package = "com.liao.im.common.proto";
+
+option java_outer_classname = "MsgProto";
+
+option java_multiple_files = false;
+
+
+
+enum HeadType {
+  LOGIN_REQUEST = 0; // 登录请求
+  LOGIN_RESPONSE = 1; // 登录响应
+  LOGOUT_REQUEST = 2; // 退出请求
+  LOGOUT_RESPONSE = 3; // 退出请求
+  KEEPALIVE_REQUEST = 4; // 心跳请求
+  KEEPALIVE_RESPONSE = 5; // 心跳响应
+  MESSAGE_REQUEST = 6; // 消息请求
+  MESSAGE_RESPONSE = 7; // 消息响应
+  MESSAGE_NOTIFICATION = 8; // 消息通知
+}
+
+enum MessageType{
+  TEXT = 0;  // 文本消息
+  AUDIO = 1;  //  音频
+  VIDEO = 2; // 视频
+  FILE = 3; // 文件
+  OTHER = 4; // 其他类型
+}
+
+
+message LoginRequest {
+  string uid = 1; // 用户id
+  string deviceId = 2; // 设备id
+  string token = 3; // 用户token
+  uint32 platform = 4; // 客户端平台
+  string app_version = 5; // app 版本
+}
+
+message LoginResponse {
+  bool result = 1; // 登录结果
+  uint32 code = 2; // 状态码
+  string info = 3; // 状态信息
+  uint32 expose = 4; // 信息提示
+}
+
+
+message MessageRequest {
+  uint64 msg_id = 1; // 消息id
+  string from = 2; // 发送方的sessionId
+  string to = 3; // 接收方的sessionId
+  uint64 time = 4; // 时间戳
+  MessageType msg_type = 5; // 消息的类型
+  bytes content = 6; // 消息内容
+  string url = 7; // 多媒体url
+  string property = 8; // 附加属性
+  string from_nick = 9; // 发送者昵称
+  string json = 10; // json
+}
+
+
+message MessageResponse {
+  bool result = 1; // 发送结果
+  uint32 code = 2; // 状态码
+  string info = 3; // 信息
+  uint32 expose = 4; // 错误描述
+  bool last_block = 5;
+  fixed32 block_index = 6;
+}
+
+
+message MessageNotification {
+  uint32 msg_type = 1;
+  bytes sender = 2;
+  string json = 3;
+  string timestamp = 4;
+}
+
+
+message Message {
+  HeadType type = 1;
+  uint64 sequence = 2;
+  string session_id = 3;
+  LoginRequest loginRequest = 4;
+  LoginResponse loginResponse = 5;
+  MessageRequest messageRequest = 6;
+  MessageResponse messageResponse = 7;
+  MessageNotification notification = 8;
+}
+
+
