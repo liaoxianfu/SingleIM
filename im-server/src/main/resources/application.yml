@@ -5,3 +5,9 @@ netty:
 logging:
   level:
     com.liao.im: debug
+thead:
+  pool:
+    core-size: 4
+    max-size: 10
+    keepAliveSeconds: 1000
+    blockingQueueSize: 50

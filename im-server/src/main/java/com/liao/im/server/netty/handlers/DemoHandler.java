@@ -1,12 +1,9 @@
 package com.liao.im.server.netty.handlers;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
-
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author liao
@@ -59,14 +56,6 @@ public class DemoHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         log.debug("客户端{}处于可读状态", ctx.channel().remoteAddress());
-//        final ByteBuf buf = (ByteBuf) msg;
-//        final byte[] data = new byte[buf.readableBytes()];
-//        buf.readBytes(data);
-//        final String backMsg = "call back" + new String(data);
-//        log.debug("发送的数据{}", backMsg);
-//        final ByteBuf buffer = ctx.alloc().buffer();
-//        buffer.writeBytes(backMsg.getBytes(StandardCharsets.UTF_8));
-//        ctx.writeAndFlush(buffer);
         log.debug("读取的数据为{} 类型为{}", msg, msg.getClass());
         ctx.channel().writeAndFlush(msg);
         super.channelRead(ctx, msg);

@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 /**
  * @author liao
  * create at 2022:02:27  21:04
@@ -20,6 +22,8 @@ import org.springframework.stereotype.Component;
 public class NettyServer {
     private int workThread;
     private int port;
+    @Resource
+    private IMHandler imHandler;
 
     public void run() {
         final ServerBootstrap b = new ServerBootstrap();
@@ -29,7 +33,7 @@ public class NettyServer {
         final NioEventLoopGroup workGroup = new NioEventLoopGroup(workThread);
         try {
             ChannelFuture future = b.group(boosGroup, workGroup)
-                    .childHandler(new IMHandler())
+                    .childHandler(imHandler)
                     .channel(NioServerSocketChannel.class)
                     .bind(port);
             log.debug("netty 初始化成功");

@@ -3,10 +3,7 @@ package com.liao.im.common.exception;
 import java.io.IOException;
 
 /**
- * @Author: liao
- * @Date 2021:10:27  12:04
- * @Version V1.0
- * @Description:
+ * 数据长度异常
  */
 public class DataLengthException extends IOException {
     public DataLengthException(String msg) {
