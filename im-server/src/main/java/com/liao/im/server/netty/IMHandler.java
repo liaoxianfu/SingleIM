@@ -2,6 +2,7 @@ package com.liao.im.server.netty;
 
 import com.liao.im.common.utils.ProtoDupleHandler;
 import com.liao.im.server.config.ServerConfig;
+import com.liao.im.server.netty.handlers.ExceptionHandler;
 import com.liao.im.server.netty.handlers.LoginHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -27,5 +28,6 @@ public class IMHandler extends ChannelInitializer<SocketChannel> {
         final ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new ProtoDupleHandler());
         pipeline.addLast(ServerConfig.LOGIN_STR, loginHandler);
+        pipeline.addLast(ExceptionHandler.INSTANCE);
     }
 }

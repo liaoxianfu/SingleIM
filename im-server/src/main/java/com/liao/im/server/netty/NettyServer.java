@@ -1,5 +1,6 @@
 package com.liao.im.server.netty;
 
+import com.liao.im.server.session.SessionMap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -41,6 +42,8 @@ public class NettyServer {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
+            // 清理所有的连接
+            SessionMap.INSTANCE.closeAll();
             boosGroup.shutdownGracefully();
             workGroup.shutdownGracefully();
         }

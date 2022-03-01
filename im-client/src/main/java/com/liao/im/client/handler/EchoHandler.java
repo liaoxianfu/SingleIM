@@ -1,5 +1,7 @@
 package com.liao.im.client.handler;
 
+import com.liao.im.common.proto.MsgProto;
+import com.liao.im.common.proto.MsgProto.Message;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -20,7 +22,13 @@ public class EchoHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.info("收到的数据为{} 类型为{}", msg, msg.getClass());
+        final Message data = (Message) msg;
+        System.out.println(data.getType());
+        if (data.getType().equals(MsgProto.HeadType.LOGIN_RESPONSE)) {
+            final MsgProto.LoginResponse loginResponse = data.getLoginResponse();
+            log.info("读取的数据为{},{}", loginResponse.getResult(),loginResponse.getdebug());
+        }
+        log.info("收到的数据 类型为{}", msg.getClass());
     }
 
 

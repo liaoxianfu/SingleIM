@@ -39,13 +39,16 @@ public class LoginHandler extends ChannelInboundHandlerAdapter {
             return;
         }
         final ServerSession session = new ServerSession(ctx.channel());
-        final Future<Boolean> submit = threadPoolExecutor.submit(() -> loginProcessor.process(session, message));
+        final Future<Boolean> submit = threadPoolExecutor.submit(() -> {
+            final Boolean process = loginProcessor.process(session, message);
+            log.debug("{} 线程提交任务", Thread.currentThread().getName());
+            return process;
+        });
         if (submit.get()) {
             log.info("登录成功，进行后续操作");
         } else {
             ServerSession.closeSession(ctx);
         }
-
 
     }
 }

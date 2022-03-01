@@ -1,5 +1,7 @@
 package com.liao.im.client.handler;
 
+import com.liao.im.common.proto.MsgProto;
+import com.liao.im.common.proto.MsgProto.Message;
 import com.liao.im.common.utils.ProtoDupleHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -49,12 +51,45 @@ public class NettyClient {
 
                     }
                 });
-        b.connect().addListener(listener);
+        final Scanner scanner = new Scanner(System.in);
+
+        final ChannelFuture future = b.connect();
+        while (true) {
+            System.out.println("请输入用户id");
+            final String userId = scanner.next();
+            System.out.println("请输入密码:");
+            final String password = scanner.next();
+            System.out.println("请输入类型");
+            final int type = scanner.nextInt();
+            final Message message = Message.newBuilder().setSequence(System.currentTimeMillis()).setType(MsgProto.HeadType.LOGIN_REQUEST)
+                    .setLoginRequest(MsgProto.LoginRequest.newBuilder()
+                            .setPlatform(type)
+                            .setUid(userId)
+                            .setToken(password)
+                            .build()).build();
+            future.channel().writeAndFlush(message).addListener(listener -> {
+                if (listener.isSuccess()) {
+                    System.out.println("发送成功");
+                } else {
+                    System.out.println("发送失败");
+                }
+            });
+        }
     }
 
     public void close() {
         if (g != null) {
             g.shutdownGracefully();
+        }
+    }
+
+    public void run() {
+        try {
+            connect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close();
         }
     }
 }

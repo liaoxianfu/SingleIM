@@ -9,6 +9,8 @@ import io.netty.util.AttributeKey;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Objects;
+
 /**
  * @author liao
  * create at 2022:03:01  11:33
@@ -23,6 +25,19 @@ public class ServerSession {
     private boolean isLogin = false;
     final static SessionMap sessionMap = SessionMap.INSTANCE;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ServerSession that = (ServerSession) o;
+        return isLogin == that.isLogin && Objects.equals(channel, that.channel) && Objects.equals(user, that.user) && Objects.equals(sessionId, that.sessionId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(channel, user, sessionId, isLogin);
+    }
+
     public ServerSession(Channel channel) {
         this.channel = channel;
         this.sessionId = UUID.randomUUID().toString(true);
@@ -32,6 +47,11 @@ public class ServerSession {
         final Channel channel = ctx.channel();
         final ServerSession serverSession = channel.attr(SESSION_KEY).get();
         if (serverSession == null) {
+            // 如果
+            channel.close().addListener(listener -> {
+                final String s = listener.isSuccess() ? "成功" : "失败";
+                log.info(s);
+            });
             log.error("session 为 null");
             return;
         }
@@ -39,12 +59,11 @@ public class ServerSession {
         sessionMap.removeSession(serverSession.getSessionId());
     }
 
-    public ServerSession bind() {
+    public void bind() {
         log.debug("server session 绑定会话 {}", channel.remoteAddress());
         channel.attr(SESSION_KEY).set(this);
         sessionMap.addSession(this);
         isLogin = true;
-        return this;
     }
 
     public void unbind() {
@@ -73,4 +92,8 @@ public class ServerSession {
             log.error("通道繁忙，无法写入 缓存消息 等待发送");
         }
     }
+
+
+
+
 }
