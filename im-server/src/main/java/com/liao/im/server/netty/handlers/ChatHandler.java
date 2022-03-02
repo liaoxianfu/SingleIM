@@ -48,7 +48,7 @@ public class ChatHandler extends ChannelInboundHandlerAdapter {
             return;
         }
         // 数据发送
-        final Future<Boolean> handle = task.handle(processor, serverSession, message);
+        final Future<Boolean> handle = task.handle(processor, ctx, message);
         if (handle.get()) {
             log.info("发送成功");
         } else {

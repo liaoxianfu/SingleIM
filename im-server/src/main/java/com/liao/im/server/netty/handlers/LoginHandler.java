@@ -1,6 +1,5 @@
 package com.liao.im.server.netty.handlers;
 
-import com.liao.im.common.config.IMConfig;
 import com.liao.im.common.proto.MsgProto;
 import com.liao.im.server.config.ServerConfig;
 import com.liao.im.server.netty.service.LoginProcessor;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.concurrent.Future;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author liao
@@ -26,12 +24,13 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class LoginHandler extends ChannelInboundHandlerAdapter {
 
     @Resource
-    HandlerTask handlerTask;
-    @Resource
-    LoginProcessor loginProcessor;
+    private HandlerTask handlerTask;
 
     @Resource
-    ChatHandler chatHandler;
+    private LoginProcessor loginProcessor;
+
+    @Resource
+    private ChatHandler chatHandler;
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -44,15 +43,15 @@ public class LoginHandler extends ChannelInboundHandlerAdapter {
             super.channelRead(ctx, msg);
             return;
         }
-        final ServerSession session = new ServerSession(ctx.channel());
-        final Future<Boolean> result = handlerTask.handle(loginProcessor, session, message);
+        final Future<Boolean> result = handlerTask.handle(loginProcessor, ctx, message);
         if (result.get()) {
             log.info("登录成功，进行后续操作");
             // 加入聊天业务操作
             ctx.pipeline().addAfter(ServerConfig.LOGIN_STR, ServerConfig.CHAT_STR, chatHandler);
             ctx.pipeline().remove(ServerConfig.LOGIN_STR);
         } else {
-            ServerSession.closeSession(ctx);
+            log.info("登录失败");
+            super.channelRead(ctx, msg);
         }
 
     }

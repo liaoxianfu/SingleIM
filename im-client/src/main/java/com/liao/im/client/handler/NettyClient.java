@@ -4,8 +4,11 @@ import com.google.protobuf.ByteString;
 import com.liao.im.client.controller.ClientSession;
 import com.liao.im.common.config.IMConfig;
 import com.liao.im.common.entity.User;
+import com.liao.im.common.proto.MsgBuilder;
 import com.liao.im.common.proto.MsgProto;
+import com.liao.im.common.proto.MsgProto.LoginRequest;
 import com.liao.im.common.proto.MsgProto.Message;
+import com.liao.im.common.proto.MsgProto.MessageRequest;
 import com.liao.im.common.utils.ProtoDupleHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -16,6 +19,7 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import lombok.Data;
@@ -53,8 +57,9 @@ public class NettyClient {
                     protected void initChannel(SocketChannel ch) throws Exception {
                         final ChannelPipeline pipeline = ch.pipeline();
                         pipeline.addLast(new ProtoDupleHandler());
+                        pipeline.addLast(new IdleStateHandler(0, 9, 0));
                         pipeline.addLast(EchoHandler.INSTANCE);
-
+                        pipeline.addLast(new HeartbeatHandler());
                     }
                 });
         scanner = new Scanner(System.in);
@@ -83,12 +88,12 @@ public class NettyClient {
         final User user = new User(userId, userId, IMConfig.platform(type));
         final ClientSession clientSession = new ClientSession(future.channel());
         clientSession.setUser(user); // 应该是得到成功响应后 从响应的数据中获取信息
-        final Message message = Message.newBuilder().setSequence(System.currentTimeMillis()).setType(MsgProto.HeadType.LOGIN_REQUEST)
-                .setLoginRequest(MsgProto.LoginRequest.newBuilder()
-                        .setPlatform(type)
-                        .setUid(userId)
-                        .setToken(password)
-                        .build()).build();
+        final LoginRequest loginRequest = LoginRequest.newBuilder().setPlatform(type)
+                .setUid(userId)
+                .setAppVersion("v1.0")
+                .setToken(password)
+                .setDeviceId("NO.001").build();
+        final Message message = MsgBuilder.loginRequestMessageBuild(loginRequest, System.currentTimeMillis());
         writeAndFlush(future, message);
     }
 
@@ -114,17 +119,17 @@ public class NettyClient {
         System.out.print("请输入消息内容");
         final String context = scanner.next();
         System.out.println();
-        final String fromUid = clientSession.getUser().getUserID();
-        final Message message = Message.newBuilder()
-                .setType(MsgProto.HeadType.MESSAGE_REQUEST)
-                .setSequence(System.currentTimeMillis()).setMessageRequest(
-                        MsgProto.MessageRequest.newBuilder()
-                                .setFrom(fromUid)
-                                .setMsgType(MsgProto.MessageType.TEXT)
-                                .setContent(ByteString.copyFrom(context.getBytes(StandardCharsets.UTF_8)))
-                                .setTo(userId)
-                                .build()
-                ).build();
+        final User user = clientSession.getUser();
+
+        var messageRequest = MessageRequest.newBuilder().setMsgType(MsgProto.MessageType.TEXT)
+                .setContent(ByteString.copyFrom(context.getBytes(StandardCharsets.UTF_8)))
+                .setFrom(user.getUserID())
+                .setFromNick(user.getNickName())
+                .setTo(userId)
+                .setTime(System.currentTimeMillis()).build();
+
+        final Message message = MsgBuilder.messageRequestMessageBuild(messageRequest, clientSession.getSessionId(),
+                System.currentTimeMillis());
         writeAndFlush(future, message);
     }
 

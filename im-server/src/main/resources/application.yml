@@ -1,4 +1,5 @@
 netty:
+  heartbeat: 10
   server:
     work-thread: 4
     port: 8888

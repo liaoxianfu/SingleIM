@@ -3,12 +3,13 @@ package com.liao.im.server.netty.service;
 import com.google.protobuf.ByteString;
 import com.liao.im.common.config.IMConfig;
 import com.liao.im.common.entity.User;
+import com.liao.im.common.proto.MsgBuilder;
 import com.liao.im.common.proto.MsgProto;
 import com.liao.im.common.proto.MsgProto.LoginResponse;
-import com.liao.im.common.proto.MsgProto.Message;
 import com.liao.im.server.session.ServerSession;
 import com.liao.im.server.session.SessionMap;
 import com.liao.im.server.web.entity.vo.UserVo;
+import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,8 @@ import java.nio.charset.StandardCharsets;
 @Service
 @Slf4j
 public class LoginProcessor implements Processor {
-    public Boolean process(ServerSession session, MsgProto.Message message) {
+    public Boolean process(ChannelHandlerContext ctx, MsgProto.Message message) {
+        final ServerSession session = new ServerSession(ctx.channel());
         final MsgProto.LoginRequest loginRequest = message.getLoginRequest();
         final int platform = loginRequest.getPlatform();
         final String uid = loginRequest.getUid();
@@ -53,10 +55,7 @@ public class LoginProcessor implements Processor {
                 setResult(false)
                 .setdebugBytes(ByteString.copyFrom("登录失败".getBytes(StandardCharsets.UTF_8)))
                 .build();
-        final Message msg = Message.newBuilder().setType(MsgProto.HeadType.LOGIN_RESPONSE)
-                .setSequence(sequence)
-                .setSessionId(session.getSessionId())
-                .setLoginResponse(loginResponse).build();
+        var msg = MsgBuilder.loginResponseMessageBuild(loginResponse, session.getSessionId(), sequence);
         session.writeAndFlush(msg);
         return false;
     }
@@ -68,10 +67,7 @@ public class LoginProcessor implements Processor {
                 setResult(true)
                 .setdebugBytes(ByteString.copyFrom("登录成功".getBytes(StandardCharsets.UTF_8)))
                 .build();
-        final Message msg = Message.newBuilder().setType(MsgProto.HeadType.LOGIN_RESPONSE)
-                .setSequence(sequence)
-                .setSessionId(session.getSessionId())
-                .setLoginResponse(loginResponse).build();
+        var msg = MsgBuilder.loginResponseMessageBuild(loginResponse, session.getSessionId(), sequence);
         session.writeAndFlush(msg);
         return true;
     }

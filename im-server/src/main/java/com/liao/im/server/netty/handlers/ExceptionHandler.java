@@ -1,7 +1,6 @@
 package com.liao.im.server.netty.handlers;
 
 import com.liao.im.server.session.ServerSession;
-import com.liao.im.server.session.SessionMap;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

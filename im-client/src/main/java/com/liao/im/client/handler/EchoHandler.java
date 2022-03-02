@@ -38,7 +38,7 @@ public class EchoHandler extends SimpleChannelInboundHandler<Object> {
             final ByteString content = data.getMessageRequest().getContent();
             System.out.printf("[%s] : %s\n", from, content.toStringUtf8());
         }
-//        log.info("收到的数据 类型为{}", msg.getClass());
+
     }
 
 

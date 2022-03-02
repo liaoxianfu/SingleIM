@@ -2,7 +2,7 @@ package com.liao.im.server.netty.thread;
 
 import com.liao.im.common.proto.MsgProto;
 import com.liao.im.server.netty.service.Processor;
-import com.liao.im.server.session.ServerSession;
+import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -24,13 +24,13 @@ public class HandlerTask {
      * 处理任务
      *
      * @param processor {@link Processor}
-     * @param session   {@link ServerSession}
+     * @param ctx   {@link ChannelHandlerContext }
      * @param message   {@link com.liao.im.common.proto.MsgProto.Message}
      * @return 异步处理结果
      */
-    public Future<Boolean> handle(Processor processor, ServerSession session, MsgProto.Message message) {
+    public Future<Boolean> handle(Processor processor, ChannelHandlerContext ctx, MsgProto.Message message) {
         return threadPoolExecutor.submit(() -> {
-            final Boolean process = processor.process(session, message);
+            final Boolean process = processor.process(ctx, message);
             log.debug("任务提交 结果为{}", process);
             return process;
         });
