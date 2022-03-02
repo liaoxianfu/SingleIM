@@ -8,5 +8,6 @@ package com.liao.im.server.config;
  */
 public class ServerConfig {
     public final static String LOGIN_STR = "login";
+    public final static String CHAT_STR = "chat";
 
 }

@@ -1,7 +1,10 @@
 package com.liao.im.server.netty.handlers;
 
+import com.liao.im.common.config.IMConfig;
 import com.liao.im.common.proto.MsgProto;
+import com.liao.im.server.config.ServerConfig;
 import com.liao.im.server.netty.service.LoginProcessor;
+import com.liao.im.server.netty.thread.HandlerTask;
 import com.liao.im.server.session.ServerSession;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -23,9 +26,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class LoginHandler extends ChannelInboundHandlerAdapter {
 
     @Resource
-    ThreadPoolExecutor threadPoolExecutor;
+    HandlerTask handlerTask;
     @Resource
     LoginProcessor loginProcessor;
+
+    @Resource
+    ChatHandler chatHandler;
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -39,13 +45,12 @@ public class LoginHandler extends ChannelInboundHandlerAdapter {
             return;
         }
         final ServerSession session = new ServerSession(ctx.channel());
-        final Future<Boolean> submit = threadPoolExecutor.submit(() -> {
-            final Boolean process = loginProcessor.process(session, message);
-            log.debug("{} 线程提交任务", Thread.currentThread().getName());
-            return process;
-        });
-        if (submit.get()) {
+        final Future<Boolean> result = handlerTask.handle(loginProcessor, session, message);
+        if (result.get()) {
             log.info("登录成功，进行后续操作");
+            // 加入聊天业务操作
+            ctx.pipeline().addAfter(ServerConfig.LOGIN_STR, ServerConfig.CHAT_STR, chatHandler);
+            ctx.pipeline().remove(ServerConfig.LOGIN_STR);
         } else {
             ServerSession.closeSession(ctx);
         }

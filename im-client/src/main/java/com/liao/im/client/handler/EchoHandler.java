@@ -1,5 +1,7 @@
 package com.liao.im.client.handler;
 
+import com.google.protobuf.ByteString;
+import com.liao.im.client.controller.ClientSession;
 import com.liao.im.common.proto.MsgProto;
 import com.liao.im.common.proto.MsgProto.Message;
 import io.netty.buffer.ByteBuf;
@@ -26,9 +28,17 @@ public class EchoHandler extends SimpleChannelInboundHandler<Object> {
         System.out.println(data.getType());
         if (data.getType().equals(MsgProto.HeadType.LOGIN_RESPONSE)) {
             final MsgProto.LoginResponse loginResponse = data.getLoginResponse();
-            log.info("读取的数据为{},{}", loginResponse.getResult(),loginResponse.getdebug());
+            log.info("读取的数据为{},{}", loginResponse.getResult(), loginResponse.getdebug());
+            if (loginResponse.getResult()) {
+                ClientSession.loginSuccess(ctx, data);
+            }
         }
-        log.info("收到的数据 类型为{}", msg.getClass());
+        if (data.getType().equals(MsgProto.HeadType.MESSAGE_REQUEST)) {
+            final String from = data.getMessageRequest().getFrom();
+            final ByteString content = data.getMessageRequest().getContent();
+            System.out.printf("[%s] : %s\n", from, content.toStringUtf8());
+        }
+//        log.info("收到的数据 类型为{}", msg.getClass());
     }
 
 

@@ -25,18 +25,6 @@ public class ServerSession {
     private boolean isLogin = false;
     final static SessionMap sessionMap = SessionMap.INSTANCE;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ServerSession that = (ServerSession) o;
-        return isLogin == that.isLogin && Objects.equals(channel, that.channel) && Objects.equals(user, that.user) && Objects.equals(sessionId, that.sessionId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(channel, user, sessionId, isLogin);
-    }
 
     public ServerSession(Channel channel) {
         this.channel = channel;

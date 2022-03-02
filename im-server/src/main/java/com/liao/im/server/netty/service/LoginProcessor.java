@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Service
 @Slf4j
-public class LoginProcessor {
+public class LoginProcessor implements Processor {
     public Boolean process(ServerSession session, MsgProto.Message message) {
         final MsgProto.LoginRequest loginRequest = message.getLoginRequest();
         final int platform = loginRequest.getPlatform();

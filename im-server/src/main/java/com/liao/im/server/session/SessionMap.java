@@ -85,5 +85,4 @@ public class SessionMap {
     public void closeAll(){
         sessionIdMap.values().forEach(ServerSession::close);
     }
-
 }

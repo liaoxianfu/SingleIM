@@ -1,5 +1,9 @@
 package com.liao.im.client.handler;
 
+import com.google.protobuf.ByteString;
+import com.liao.im.client.controller.ClientSession;
+import com.liao.im.common.config.IMConfig;
+import com.liao.im.common.entity.User;
 import com.liao.im.common.proto.MsgProto;
 import com.liao.im.common.proto.MsgProto.Message;
 import com.liao.im.common.utils.ProtoDupleHandler;
@@ -19,6 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
@@ -35,6 +40,7 @@ public class NettyClient {
     private int workerThreads;
     NioEventLoopGroup g;
     private GenericFutureListener<? extends Future<? super Void>> listener;
+    Scanner scanner;
 
     public void connect() throws Exception {
         final Bootstrap b = new Bootstrap();
@@ -51,30 +57,75 @@ public class NettyClient {
 
                     }
                 });
-        final Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
         final ChannelFuture future = b.connect();
         while (true) {
-            System.out.println("请输入用户id");
-            final String userId = scanner.next();
-            System.out.println("请输入密码:");
-            final String password = scanner.next();
-            System.out.println("请输入类型");
-            final int type = scanner.nextInt();
-            final Message message = Message.newBuilder().setSequence(System.currentTimeMillis()).setType(MsgProto.HeadType.LOGIN_REQUEST)
-                    .setLoginRequest(MsgProto.LoginRequest.newBuilder()
-                            .setPlatform(type)
-                            .setUid(userId)
-                            .setToken(password)
-                            .build()).build();
-            future.channel().writeAndFlush(message).addListener(listener -> {
-                if (listener.isSuccess()) {
-                    System.out.println("发送成功");
-                } else {
-                    System.out.println("发送失败");
-                }
-            });
+            System.out.println("选择操作 1 登录 2 发送消息");
+            final int chose = scanner.nextInt();
+            switch (chose) {
+                case 1:
+                    loginUI(future);
+                    break;
+                case 2:
+                    chatUI(future);
+            }
         }
+    }
+
+    private void loginUI(ChannelFuture future) {
+        System.out.println("请输入用户id");
+        final String userId = scanner.next();
+        System.out.println("请输入密码:");
+        final String password = scanner.next();
+        System.out.println("请输入类型");
+        final int type = scanner.nextInt();
+        final User user = new User(userId, userId, IMConfig.platform(type));
+        final ClientSession clientSession = new ClientSession(future.channel());
+        clientSession.setUser(user); // 应该是得到成功响应后 从响应的数据中获取信息
+        final Message message = Message.newBuilder().setSequence(System.currentTimeMillis()).setType(MsgProto.HeadType.LOGIN_REQUEST)
+                .setLoginRequest(MsgProto.LoginRequest.newBuilder()
+                        .setPlatform(type)
+                        .setUid(userId)
+                        .setToken(password)
+                        .build()).build();
+        writeAndFlush(future, message);
+    }
+
+    private void writeAndFlush(ChannelFuture future, Message message) {
+        future.channel().writeAndFlush(message).addListener(listener -> {
+            if (listener.isSuccess()) {
+                System.out.println("发送成功");
+            } else {
+                System.out.println("发送失败");
+            }
+        });
+    }
+
+    private void chatUI(ChannelFuture future) {
+        final ClientSession clientSession = future.channel().attr(ClientSession.SESSION_KEY).get();
+        if (!clientSession.isLogin()) {
+            log.error("没有登录 请进行登录");
+            return;
+        }
+        System.out.print("请输入要发送用户id");
+        final String userId = scanner.next();
+        System.out.println();
+        System.out.print("请输入消息内容");
+        final String context = scanner.next();
+        System.out.println();
+        final String fromUid = clientSession.getUser().getUserID();
+        final Message message = Message.newBuilder()
+                .setType(MsgProto.HeadType.MESSAGE_REQUEST)
+                .setSequence(System.currentTimeMillis()).setMessageRequest(
+                        MsgProto.MessageRequest.newBuilder()
+                                .setFrom(fromUid)
+                                .setMsgType(MsgProto.MessageType.TEXT)
+                                .setContent(ByteString.copyFrom(context.getBytes(StandardCharsets.UTF_8)))
+                                .setTo(userId)
+                                .build()
+                ).build();
+        writeAndFlush(future, message);
     }
 
     public void close() {

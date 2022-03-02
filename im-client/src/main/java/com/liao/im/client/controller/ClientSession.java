@@ -37,7 +37,7 @@ public class ClientSession {
     public static void loginSuccess(ChannelHandlerContext context, MsgProto.Message msg) {
         final Channel channel = context.channel();
         final ClientSession session = channel.attr(SESSION_KEY).get();
-        final String sessionId = session.getSessionId();
+        final String sessionId = msg.getSessionId();
         session.setSessionId(sessionId);
         session.setLogin(true);
         log.info("登录成功 session_id {}", sessionId);
