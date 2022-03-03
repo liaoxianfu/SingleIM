@@ -4,7 +4,6 @@ import com.liao.im.common.proto.MsgProto;
 import com.liao.im.server.config.ServerConfig;
 import com.liao.im.server.netty.service.LoginProcessor;
 import com.liao.im.server.netty.thread.HandlerTask;
-import com.liao.im.server.session.ServerSession;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -49,6 +48,7 @@ public class LoginHandler extends ChannelInboundHandlerAdapter {
             // 加入聊天业务操作
             ctx.pipeline().addAfter(ServerConfig.LOGIN_STR, ServerConfig.CHAT_STR, chatHandler);
             ctx.pipeline().remove(ServerConfig.LOGIN_STR);
+            // 读取离线时未接收到的信息
         } else {
             log.info("登录失败");
             super.channelRead(ctx, msg);

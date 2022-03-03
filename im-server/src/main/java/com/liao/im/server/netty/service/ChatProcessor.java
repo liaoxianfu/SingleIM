@@ -22,11 +22,12 @@ public class ChatProcessor implements Processor {
     public Boolean process(ChannelHandlerContext ctx, MsgProto.Message msg) {
         final String toUid = msg.getMessageRequest().getTo();
         final Set<ServerSession> sessions = SessionMap.INSTANCE.getSessionsByUserId(toUid);
-        if (sessions==null||sessions.size() == 0) {
+        if (sessions == null || sessions.size() == 0) {
             log.info("用户没有上线 将消息缓存");
             return false;
         }
         sessions.forEach(s -> s.writeAndFlush(msg));
+        log.info("用户信息发送成功");
         return true;
     }
 }

@@ -58,14 +58,6 @@ public class HearBeatHandler extends ChannelInboundHandlerAdapter {
             return;
         }
         log.info("心跳数据");
-        log.error("processor = null ? {}",heartBeatProcessor==null);
-        log.error("ctx = null ? {}",ctx==null);
-        log.error("message = null ? {}",message==null);
-        final Future<Boolean> handle = handlerTask.handle(heartBeatProcessor, ctx, message);
-        if (handle.get()) {
-            log.info("转发成功");
-        } else {
-            log.info("转发失败");
-        }
+        handlerTask.handle0(heartBeatProcessor, ctx, message);
     }
 }

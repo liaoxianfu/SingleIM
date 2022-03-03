@@ -9,8 +9,6 @@ import io.netty.util.AttributeKey;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Objects;
-
 /**
  * @author liao
  * create at 2022:03:01  11:33

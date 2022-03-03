@@ -24,7 +24,7 @@ public class HandlerTask {
      * 处理任务
      *
      * @param processor {@link Processor}
-     * @param ctx   {@link ChannelHandlerContext }
+     * @param ctx       {@link ChannelHandlerContext }
      * @param message   {@link com.liao.im.common.proto.MsgProto.Message}
      * @return 异步处理结果
      */
@@ -33,6 +33,12 @@ public class HandlerTask {
             final Boolean process = processor.process(ctx, message);
             log.debug("任务提交 结果为{}", process);
             return process;
+        });
+    }
+
+    public void handle0(Processor processor, ChannelHandlerContext ctx, MsgProto.Message message) {
+        threadPoolExecutor.execute(() -> {
+            processor.process(ctx, message);
         });
     }
 }
